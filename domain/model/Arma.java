@@ -20,6 +20,10 @@ public abstract class Arma
         this.porcentajePrecision = porcentajePrecision;
         this.cadenciaDisparo = cadenciaDisparo;
     }
+    
+    public String getNombreArma() {
+    	return nombreArma;
+    }
 
     public int getCargadorActual()
     {
@@ -41,12 +45,18 @@ public abstract class Arma
         return porcentajePrecision;
     }
     
-    public abstract void disparar();
+    public int getCadenciaDisparo() {
+    	return cadenciaDisparo;
+    }
     
-    public void recargar(){
-        if(puedeRecargar()){
-            
-        }
+    private void vaciarReserva() {
+    	this.cargadorActual += this.municionReserva;
+    	this.municionReserva = 0;
+    }
+    
+    private void llenarCargadorActual(int necesaria) {
+    	this.cargadorActual += necesaria;
+    	this.municionReserva -= necesaria;
     }
     
     private boolean cargadorEstaLleno(){
@@ -62,6 +72,27 @@ public abstract class Arma
             return false;
         }
         return tieneReserva();
+    }
+ 
+    public abstract void disparar();
+    
+    public void recargar(){
+        while(puedeRecargar()){
+        	int municionNecesaria = (this.dimensionCargador - this.cargadorActual);
+            if(this.cargadorActual > this.municionReserva) {
+            	vaciarReserva();
+            }
+            else { // (cargadorActual <= municionReserva)
+            	llenarCargadorActual(municionNecesaria);
+            }
+        }
+    }
+    	
+    public void desplegarEstado() {
+    	System.out.println("Municion: " + this.cargadorActual + "/" + this.municionReserva
+    			+ "El cargador esta lleno: " + cargadorEstaLleno() +
+    			"\nHay municion en la reserva: " + tieneReserva() +
+    			"Dimension del cargador: " + this.dimensionCargador);
     }
     
 }
