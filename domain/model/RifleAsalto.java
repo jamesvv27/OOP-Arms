@@ -7,6 +7,11 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
 
     private int numeroDisparos;
 
+    /*
+    numeroDisparos => Cantidad de tiros que se disparan en funcion de si se esta en RAFAGA
+    o en DISPARO UNICO.
+    */
+
     public RifleAsalto(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
             int numeroDisparos) {
@@ -18,6 +23,7 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
     public void disparar(){
         int n_Balas = calcularDisparosPosibles();
         if(puedeDisparar()){
+            // cargadorActual -= disparosPosibles
             setCargadorActual(getCargadorActual() - n_Balas);
         }
         System.out.print(getNombreArma() + "dispara " + n_Balas + " balas en " + obtenerModoDisparo());
@@ -25,6 +31,14 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
 
     @Override
     public int cambiarModoDisparo(){
+
+        /*
+        Toggle que:
+        Cicla por los modos posibles de disparo y los cambia en funcion del modo de disparo actual;
+        Solo se puede cambiar a AUTOMATICO si el modo de disparo actual es APUNTADO.
+
+        Cuando se haga un cambio, retorna algo para detener la funcion.
+        */
 
         if(esModoEsperado(Disparo.SOLO, "Cambiar por APUNTADO")){
             cambiarPorApuntado();
@@ -48,6 +62,12 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
 
     @Override
     public String obtenerModoDisparo(){
+
+        /*
+        Cicla por los modos de disparo. RAFAGA unicamente puede estar asociado a AUTOMATICO.
+        Si el modo actual es distinto a AUTOMATICO, para RifleAsalto, siempre sera DISPARO UNICO.
+        */
+
         if(esModoEsperado(Disparo.AUTOMATICO, "Mostrar disparo AUTOMATICO")){
             return "RAFAGA";
         }
@@ -58,23 +78,24 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
         return numeroDisparos;
     }
 
-    private void cambiarPorSolo(){
-        setModoDisparo(Disparo.SOLO);
-        alternarUnico();
-    }
-
+    // En el modo rafaga se disparan 8 balas. Si en el cargadorActual solo hay 7, los disparos posibles son 7.
     private int calcularDisparosPosibles(){
         return getCargadorActual() < this.numeroDisparos ? getCargadorActual() : this.numeroDisparos;
     }
 
     private void cambiarPorApuntado(){
         setModoDisparo(Disparo.APUNTADO);
-        alternarUnico();
+        alternarUnico(); // DISPARO UNICO esta asociado a APUNTADO
     }
 
     private void cambiarPorAutomatico(){
         setModoDisparo(Disparo.AUTOMATICO);
-        alternarRafaga();
+        alternarRafaga(); // RAFAGA esta asociado a AUTOMATICO
+    }
+
+    private void cambiarPorSolo(){
+        setModoDisparo(Disparo.SOLO);
+        alternarUnico();
     }
 
     private void alternarUnico(){
