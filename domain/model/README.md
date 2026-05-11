@@ -118,3 +118,11 @@ Los modos de disparo del Enum `Disparo` tienen su equivalente para la Interface 
 |AUTOMATICO*|Ráfaga|
 
 ###### * Un arma que tenga disponible el enum `AUTOMATICO` evidentemente siempre implementará el Interface `ModoAutomatico`
+
+2. Modos de disparo de `AmetralladoraLigera`:
+
+| Enum `Disparo` | Interface `ModoAutomatico`|
+|:-:|:-:|
+|AUTOMATICO|Ráfaga|
+
+`AmetralladoraLigera` tiene los métodos `alternarModoDisparo()` y `alternarARafaga()` aún teniendo disponible solo un modo de disparo (_AUTOMATICO_). Esto para la implementación de la Interface `cambiarModoDisparo()`. Se verifica si el modo de disparo actual es diferente a _`AUTOMATICO`_ y lo reajusta a dicho modo.
