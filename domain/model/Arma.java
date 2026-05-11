@@ -1,6 +1,7 @@
 
 package domain.model;
 
+import domain.enums.Disparo;
 
 public abstract class Arma
 {
@@ -10,8 +11,9 @@ public abstract class Arma
     private int municionReserva;
     private int porcentajePrecision;
     private int cadenciaDisparo;
+    private Disparo modoDisparo;
 
-    public Arma(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva, int porcentajePrecision, int cadenciaDisparo)
+    public Arma(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva, int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo)
     {
         this.nombreArma = nombreArma;
         this.cargadorActual = cargadorActual;
@@ -19,15 +21,24 @@ public abstract class Arma
         this.municionReserva = municionReserva;
         this.porcentajePrecision = porcentajePrecision;
         this.cadenciaDisparo = cadenciaDisparo;
+        this.modoDisparo = modoDisparo;
     }
     
     public String getNombreArma() {
     	return nombreArma;
     }
 
+    public Disparo getModoDisparo(){
+        return modoDisparo;
+    }
+
     public int getCargadorActual()
     {
         return cargadorActual;
+    }
+
+    public void setCargadorActual(int cargadorActual){
+        this.cargadorActual = cargadorActual;
     }
 
     public int getDimensionCargador()
@@ -49,6 +60,10 @@ public abstract class Arma
     	return cadenciaDisparo;
     }
     
+    public boolean puedeDisparar(){
+        return cargadorEstaVacio();
+    }
+
     private void vaciarReserva() {
     	this.cargadorActual += this.municionReserva;
     	this.municionReserva = 0;
@@ -62,6 +77,10 @@ public abstract class Arma
     private boolean cargadorEstaLleno(){
         return this.cargadorActual == this.dimensionCargador;
     }
+
+    private boolean cargadorEstaVacio(){
+        return this.cargadorActual == 0;
+    }
     
     private boolean tieneReserva(){
         return this.municionReserva > 0;
@@ -72,6 +91,10 @@ public abstract class Arma
             return false;
         }
         return tieneReserva();
+    }
+
+    public void setModoDisparo(Disparo nuevoModo){
+        this.modoDisparo = nuevoModo;
     }
  
     public abstract void disparar();
