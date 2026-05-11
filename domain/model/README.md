@@ -95,15 +95,15 @@ Basadas de algunas de Fallout 2
 
 Todos los tipos de armas que tengan ***más de un método de disparo, independientemente de si tengan un modo automáitco o no***, pueden cambiar su modo de disparo con el método (TODO): `alternarModoDisparo()`. Los modos se encuentran en el _Enum_ _`domain/enums/Disparo`_; (**solo, apuntado...**), y la cantidad de modos utilizables para cada arma puede ser cualquiera.
 
-    ```java
-    public enum Disparo{
-        SOLO,
-        APUNTADO,
-        AUTOMATICO
+```java
+public enum Disparo{
+    SOLO,
+    APUNTADO,
+    AUTOMATICO
     }
 
     // El enum tiene 3 elementos, pero la clase Pistola puede usar unicamente SOLO y APUNTADO
-    ```
+ ```
 
 Pero aquellas que implementen la _Interface_ _`util/interfaces/ModoAutomatico`_ sobrescribirán el método `cambiarModoDisparo()` para hacer esto, pues en este se diferencía si el arma hace **disparos únicos** o **ráfagas**.
 
