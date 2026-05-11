@@ -1,6 +1,6 @@
-# Weapons
+# Armas
 
-Five weapon types:
+Cinco tipos de armas:
 
     - RifleAsalto
     - Francotirador
@@ -8,9 +8,9 @@ Five weapon types:
     - Pistola
     - Ametralladora Ligera
 
-based off some from Fallout 2
+Basadas de algunas de Fallout 2
 
-## List of weapons
+## Lista de armas
 
 ### Unordered
 
@@ -20,62 +20,64 @@ based off some from Fallout 2
             - Default
             - Nightsight
             - HPFA (High Power Full Automatic)
-        + Usable Ammo
+        + Municion
             - 7.62mm
     * `AK-112`
-        + Variants
-            - Expanded Magazine
-        + Usable Ammo
-            - 5mm AP (Armor Piercing)
-            - 5mm JHP (Jacketed Hollow Point)
-2. `Francotirador`:
-    * `M72 Gauss Rifle`
-        + Usable Ammo
-            - 2mm EC (Electromagnetic Cartdrige)
-    * `Wattz 2000 Laser Rifle`
-        + Variants
-            - Extended Capacity
-        + Usable Ammo
-            - Microfusion Cell
-3. `Escopeta`: 
-    + `H&K CAWS`
-        + Usable Ammo
-            - 12 Gauge
-    * `Pancor Jackhammer`
-        + Usable Ammo
-            - 12 Gauge
-4. `Pistola`: 
-    * `Desert Eagle .44`
-        + Variants
+        + Variantes
             - Default
             - Expanded Magazine
-        + Usable Ammo
+        + Municion utilizable
+            - 5mm AP (Armor Piercing)
+            - 5mm JHP (Jacketed Hollow Point)
+1. `Francotirador`:
+    * `M72 Gauss Rifle`
+        + Municion
+            - 2mm EC (Electromagnetic Cartdrige)
+    * `Wattz 2000 Laser Rifle`
+        + Variantes
+            - Default
+            - Extended Capacity
+        + Municion
+            - Microfusion Cell
+2. `Escopeta`: 
+    + `H&K CAWS`
+        + Municion
+            - 12 Gauge
+    * `Pancor Jackhammer`
+        + Municion
+            - 12 Gauge
+3. `Pistola`: 
+    * `Desert Eagle .44`
+        + Variantes
+            - Default
+            - Expanded Magazine
+        + Municion utilizable
             - .44 Magnum FMJ (Full Metal Jacket)
             - .44 Magnum JHP (Jacketed Hollow Point)
     * `PPK12 Gauss Pistol`
-        + Usable Ammo
+        + Municion
             - 2mm EC (Electromagnetic Cartdrige)
     * `9mm Mauser`
-        + Variants
+        + Variantes
             - Default
             - Broomhandle
-        + Usable Ammo
+        + Municion utilizable
             - 9mm
             - 9mm ball
-5. `AmetralladoraLigera`: 
+4. `AmetralladoraLigera`: 
     * `Avenger Minigun`
-        + Usable Ammo
+        + Municion utilizable
             - 5mm AP (Armor Piercing)
             - 5mm JHP (Jacketed Hollow Point)
     * `Light Support Weapon`
-        + Usable Ammo
+        + Municion
             - .223 FMJ (Full Metal Jacket)
 
 
 
-### Variations
+### Variantes
 
-| Weapons  | Type | Weapon Variants / Mods | Ammo Variants |
+| Arma  | Tipo | Variantes de arma / Mods | Variantes de municion |
 | - |:-: |:-:|:-:|
 | FN FAL      | Rifle de Asalto | ✅     |❌ |
 | AK-112      | Rifle de Asalto | ✅     |✅ |
@@ -89,3 +91,30 @@ based off some from Fallout 2
 | Avenger Minigun      | Ametralladora Ligera| ❌     | ✅|
 | Light Support Weapon      | Ametralladora Ligera| ❌     | ❌|
 
+### Modos de disparo
+
+Todos los tipos de armas que tengan ***más de un método de disparo, independientemente de si tengan un modo automáitco o no***, pueden cambiar su modo de disparo con el método (TODO): `alternarModoDisparo()`. Los modos se encuentran en el _Enum_ _`domain/enums/Disparo`_; (**solo, apuntado...**), y la cantidad de modos utilizables para cada arma puede ser cualquiera.
+
+```java
+public enum Disparo{
+    SOLO,
+    APUNTADO,
+    AUTOMATICO
+    }
+
+    // El enum tiene 3 elementos, pero la clase Pistola puede usar unicamente SOLO y APUNTADO
+ ```
+
+Pero aquellas que implementen la _Interface_ _`util/interfaces/ModoAutomatico`_ sobrescribirán el método `cambiarModoDisparo()` para hacer esto, pues en este se diferencía si el arma hace **disparos únicos** o **ráfagas**.
+
+Los modos de disparo del Enum `Disparo` tienen su equivalente para la Interface `ModoAutomatico`, pues las armas que implementen esta Interface, seguirán empleando los elementos del Enum.
+
+1. Modos de disparo de `RifleAsalto`:
+
+| Enum `Disparo` | Interface `ModoAutomatico`|
+|:-:|:-:|
+|SOLO|Único|
+|APUNTADO|Único|
+|AUTOMATICO*|Ráfaga|
+
+###### * Un arma que tenga disponible el enum `AUTOMATICO` evidentemente siempre implementará el Interface `ModoAutomatico`
