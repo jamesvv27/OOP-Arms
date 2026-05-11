@@ -73,7 +73,11 @@ Basadas de algunas de Fallout 2
         + Municion
             - .223 FMJ (Full Metal Jacket)
 
+### Herencia
 
+__Armas --> RifleAsalto --> FN FAL__
+
+La **recarga** se define en _`Armas`_. El **disparo** y **el cambio del modo de disparo** se define en _`RifleAsalto`_ Las **dimensiones del cargador**, **variantes de arma**, y **variantes de munición** se definen en _`FN FAL`_.
 
 ### Variantes
 
