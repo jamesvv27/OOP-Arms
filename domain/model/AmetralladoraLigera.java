@@ -11,6 +11,7 @@ public class AmetralladoraLigera extends Arma implements ModoAutomatico{
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
             int numeroDisparos){
             super(nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.AUTOMATICO);
+            this.numeroDisparos = 14;
     } 
 
     @Override
