@@ -130,3 +130,12 @@ Los modos de disparo del Enum `Disparo` tienen su equivalente para la Interface 
 |AUTOMATICO|Ráfaga|
 
 `AmetralladoraLigera` tiene los métodos `alternarModoDisparo()` y `alternarARafaga()` aún teniendo disponible solo un modo de disparo (_AUTOMATICO_). Esto para la implementación de la Interface `cambiarModoDisparo()`. Se verifica si el modo de disparo actual es diferente a _`AUTOMATICO`_ y lo reajusta a dicho modo.
+
+3. Modos de disparo de `Escopeta`:
+
+| Enum `Disparo` | Interface `ModoAutomatico`|
+|:-:|:-:|
+|SOLO|Único|
+|AUTOMATICO|Ráfaga|
+
+Un arma que pueda hacer disparos en ráfaga mediante la interface `ModoAutomatico` empleará por consiguiente `Disparo.AUTOMATICO`.

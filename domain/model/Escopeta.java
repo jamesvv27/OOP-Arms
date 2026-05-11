@@ -4,6 +4,11 @@ import domain.enums.Disparo;
 import domain.util.interfaces.ModoAutomatico;
 
 public class Escopeta extends Arma implements ModoAutomatico{
+
+    /*
+        Un arma debe implementar ModoAutomatico y usar Disparo.AUTOMATICO
+        si puede disparar en RAFAGA
+    */
     
     private int numeroDisparos;
 
@@ -50,7 +55,7 @@ public class Escopeta extends Arma implements ModoAutomatico{
             return "RAFAGA";
         }
 
-        return "DISPARO " + getModoDisparo();
+        return "DISPARO " + getModoDisparo(); //Fallback en caso de que ninguno de los anteriores pase
 
     }
 
@@ -80,7 +85,6 @@ public class Escopeta extends Arma implements ModoAutomatico{
         this.numeroDisparos = 6;
     }
 
-
     private boolean esModoEsperado(Disparo esperado, String accion){
         if(getModoDisparo() != esperado){
             System.out.print("No se puede " + accion + " cuando modoDisparo =" +
@@ -90,6 +94,5 @@ public class Escopeta extends Arma implements ModoAutomatico{
         }
         return true;
     }
-
 
 }
