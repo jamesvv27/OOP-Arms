@@ -10,9 +10,7 @@ Cinco tipos de armas:
 
 Basadas de algunas de Fallout 2
 
-## Lista de armas
-
-### Unordered
+## Lista de armas -  Resumen
 
 1. `RifleAsalto`: 
     * `FN FAL`
@@ -29,7 +27,7 @@ Basadas de algunas de Fallout 2
         + Municion utilizable
             - 5mm AP (Armor Piercing)
             - 5mm JHP (Jacketed Hollow Point)
-1. `Francotirador`:
+2. `Francotirador`:
     * `M72 Gauss Rifle`
         + Municion
             - 2mm EC (Electromagnetic Cartdrige)
@@ -39,14 +37,14 @@ Basadas de algunas de Fallout 2
             - Extended Capacity
         + Municion
             - Microfusion Cell
-2. `Escopeta`: 
+3. `Escopeta`: 
     + `H&K CAWS`
         + Municion
             - 12 Gauge
     * `Pancor Jackhammer`
         + Municion
             - 12 Gauge
-3. `Pistola`: 
+4. `Pistola`: 
     * `Desert Eagle .44`
         + Variantes
             - Default
@@ -64,7 +62,7 @@ Basadas de algunas de Fallout 2
         + Municion utilizable
             - 9mm
             - 9mm ball
-4. `AmetralladoraLigera`: 
+5. `AmetralladoraLigera`: 
     * `Avenger Minigun`
         + Municion utilizable
             - 5mm AP (Armor Piercing)
@@ -72,12 +70,6 @@ Basadas de algunas de Fallout 2
     * `Light Support Weapon`
         + Municion
             - .223 FMJ (Full Metal Jacket)
-
-### Herencia
-
-__Armas --> RifleAsalto --> FN FAL__
-
-La **recarga** se define en _`Armas`_. El **disparo** y **el cambio del modo de disparo** se define en _`RifleAsalto`_ Las **dimensiones del cargador**, **variantes de arma**, y **variantes de munición** se definen en _`FN FAL`_.
 
 ### Variantes
 
@@ -95,7 +87,23 @@ La **recarga** se define en _`Armas`_. El **disparo** y **el cambio del modo de 
 | Avenger Minigun      | Ametralladora Ligera| ❌     | ✅|
 | Light Support Weapon      | Ametralladora Ligera| ❌     | ❌|
 
-### Modos de disparo
+## Estructura
+
+### Herencia
+
+__Armas --> Pistola --> DesertEagle__
+
+La **recarga** se define en _`Armas`_. El **disparo** y **el cambio del modo de disparo** se define en _`RifleAsalto`_ Las **dimensiones del cargador**, **variantes de arma**, y **variantes de munición** se definen en _`FN FAL`_.
+
+```java
+public abstract class Arma {...}
+...
+    public class Pistola extends Arma{...}
+...
+        public class DesertEagle extends Pistola{...}
+```
+
+### Definición de modos de disparo
 
 Todos los tipos de armas que tengan ***más de un método de disparo, independientemente de si tengan un modo automáitco o no***, pueden cambiar su modo de disparo con el método `alternarModoDisparo()`. Los modos se encuentran en el _Enum_ _`domain/enums/Disparo`_; (**solo, apuntado...**), y la cantidad de modos utilizables para cada arma puede ser cualquiera.
 
@@ -146,3 +154,15 @@ Un arma que pueda hacer disparos en ráfaga mediante la interface `ModoAutomatic
 |:-:|:-:|
 |SOLO|Único|
 |APUNTADO|Único|
+
+
+### Definición de Accesorios / Variantes
+
+Toda arma descendiente de su respectiva clase madre _-independientemente de cuál-_ (ej. `DesertEagle` proveniente de `Pistola`) toma sus accesorios del enum _`domain/enums/Accesorio`_. La existencia de uno o varios métodos privados del siguiente tipo para cada **arma hija** definen ***qué*** accesorios del enum podrá tomar dicha arma.
+
+```java
+private void agregarAccesorioMag(){ // Mag => CARGADOR_EXPANDIDO
+        if(!estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Agregar Cargador Ext"))
+            setAccesorio(Accesorio.CARGADOR_EXPANDIDO);
+    }
+```
