@@ -97,7 +97,7 @@ La **recarga** se define en _`Armas`_. El **disparo** y **el cambio del modo de 
 
 ### Modos de disparo
 
-Todos los tipos de armas que tengan ***más de un método de disparo, independientemente de si tengan un modo automáitco o no***, pueden cambiar su modo de disparo con el método (TODO): `alternarModoDisparo()`. Los modos se encuentran en el _Enum_ _`domain/enums/Disparo`_; (**solo, apuntado...**), y la cantidad de modos utilizables para cada arma puede ser cualquiera.
+Todos los tipos de armas que tengan ***más de un método de disparo, independientemente de si tengan un modo automáitco o no***, pueden cambiar su modo de disparo con el método `alternarModoDisparo()`. Los modos se encuentran en el _Enum_ _`domain/enums/Disparo`_; (**solo, apuntado...**), y la cantidad de modos utilizables para cada arma puede ser cualquiera.
 
 ```java
 public enum Disparo{
