@@ -21,10 +21,10 @@ public class Escopeta extends Arma implements ModoAutomatico{
 
     @Override
     public void disparar(){
-        int n_Balas = calcularDisparosPosibles();
+        int n_Cartuchos = calcularDisparosPosibles();
         if(puedeDisparar()){
-            setCargadorActual(getCargadorActual() - n_Balas);
-            System.out.print(getNombreArma() + "dispara " + n_Balas + " balas en " + obtenerModoDisparo());
+            setCargadorActual(getCargadorActual() - n_Cartuchos);
+            System.out.print(getNombreArma() + "dispara perdigones en " + n_Cartuchos + " en " + obtenerModoDisparo());
         }
     }
 
