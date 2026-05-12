@@ -115,7 +115,8 @@ public abstract class Arma
     	System.out.println("Municion: " + this.cargadorActual + "/" + this.municionReserva
     			+ "El cargador esta lleno: " + cargadorEstaLleno() +
     			"\nHay municion en la reserva: " + tieneReserva() +
-    			"Dimension del cargador: " + this.dimensionCargador);
+    			"Dimension del cargador: " + this.dimensionCargador +
+                "Modo de disparo: " + getModoDisparo());
     }
     
 }
