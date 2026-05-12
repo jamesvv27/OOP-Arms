@@ -7,7 +7,7 @@ public abstract class Arma
 {
     private final String nombreArma;
     private int cargadorActual;
-    private final int dimensionCargador;
+    private int dimensionCargador;
     private int municionReserva;
     private final int porcentajePrecision;
     private final int cadenciaDisparo;
