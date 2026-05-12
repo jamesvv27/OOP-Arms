@@ -139,3 +139,10 @@ Los modos de disparo del Enum `Disparo` tienen su equivalente para la Interface 
 |AUTOMATICO|Ráfaga|
 
 Un arma que pueda hacer disparos en ráfaga mediante la interface `ModoAutomatico` empleará por consiguiente `Disparo.AUTOMATICO`.
+
+4. Modos de disparo de `Pistola` y `Francotirador`:
+
+| Enum `Disparo` | Interface `ModoAutomatico`|
+|:-:|:-:|
+|SOLO|Único|
+|APUNTADO|Único|
