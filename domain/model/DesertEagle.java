@@ -14,7 +14,7 @@ public class DesertEagle extends Pistola implements Personalizable{
             Accesorio accesorioActual) {
         super("Desert Eagle", 0, 8,
             16, 70,
-            2,
+            7,
                 Disparo.SOLO);
                 this.accesorioActual = Accesorio.NINGUNO;
     }
