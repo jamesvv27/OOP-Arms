@@ -14,7 +14,7 @@ public class Francotirador extends Arma{
         if(puedeDisparar()){
             // cargadorActual--
             setCargadorActual(getCargadorActual() - 1);
-            System.out.print(getNombreArma() + "dispara 1 bala " + obtenerInfoDisparo());
+            System.out.print(getNombreArma() + " lanza 1 bala de alto poder " + obtenerInfoDisparo());
         }
     }
 
