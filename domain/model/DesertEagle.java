@@ -37,7 +37,7 @@ public class DesertEagle extends Pistola implements Personalizable{
     public int agregarAccesorio(Accesorio deseado) {
         if(esMismoAccesorio(deseado, Accesorio.CARGADOR_EXPANDIDO)){
             agregarAccesorioMag();
-            return 1;
+            return 1; // Detener cuando se encuentra una coincidencia
         }
         return 0;
     }
