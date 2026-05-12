@@ -25,8 +25,8 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
         if(puedeDisparar()){
             // cargadorActual -= disparosPosibles
             setCargadorActual(getCargadorActual() - n_Balas);
+            System.out.print(getNombreArma() + "dispara " + n_Balas + " balas en " + obtenerModoDisparo());
         }
-        System.out.print(getNombreArma() + "dispara " + n_Balas + " balas en " + obtenerModoDisparo());
     }
 
     @Override

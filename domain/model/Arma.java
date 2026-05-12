@@ -5,12 +5,12 @@ import domain.enums.Disparo;
 
 public abstract class Arma
 {
-    private String nombreArma;
+    private final String nombreArma;
     private int cargadorActual;
-    private int dimensionCargador;
+    private final int dimensionCargador;
     private int municionReserva;
-    private int porcentajePrecision;
-    private int cadenciaDisparo;
+    private final int porcentajePrecision;
+    private final int cadenciaDisparo;
     private Disparo modoDisparo;
 
     public Arma(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva, int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo)
@@ -115,7 +115,8 @@ public abstract class Arma
     	System.out.println("Municion: " + this.cargadorActual + "/" + this.municionReserva
     			+ "El cargador esta lleno: " + cargadorEstaLleno() +
     			"\nHay municion en la reserva: " + tieneReserva() +
-    			"Dimension del cargador: " + this.dimensionCargador);
+    			"Dimension del cargador: " + this.dimensionCargador +
+                "Modo de disparo: " + getModoDisparo());
     }
     
 }

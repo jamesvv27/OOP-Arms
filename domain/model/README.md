@@ -73,7 +73,11 @@ Basadas de algunas de Fallout 2
         + Municion
             - .223 FMJ (Full Metal Jacket)
 
+### Herencia
 
+__Armas --> RifleAsalto --> FN FAL__
+
+La **recarga** se define en _`Armas`_. El **disparo** y **el cambio del modo de disparo** se define en _`RifleAsalto`_ Las **dimensiones del cargador**, **variantes de arma**, y **variantes de munición** se definen en _`FN FAL`_.
 
 ### Variantes
 
@@ -93,7 +97,7 @@ Basadas de algunas de Fallout 2
 
 ### Modos de disparo
 
-Todos los tipos de armas que tengan ***más de un método de disparo, independientemente de si tengan un modo automáitco o no***, pueden cambiar su modo de disparo con el método (TODO): `alternarModoDisparo()`. Los modos se encuentran en el _Enum_ _`domain/enums/Disparo`_; (**solo, apuntado...**), y la cantidad de modos utilizables para cada arma puede ser cualquiera.
+Todos los tipos de armas que tengan ***más de un método de disparo, independientemente de si tengan un modo automáitco o no***, pueden cambiar su modo de disparo con el método `alternarModoDisparo()`. Los modos se encuentran en el _Enum_ _`domain/enums/Disparo`_; (**solo, apuntado...**), y la cantidad de modos utilizables para cada arma puede ser cualquiera.
 
 ```java
 public enum Disparo{
@@ -118,3 +122,27 @@ Los modos de disparo del Enum `Disparo` tienen su equivalente para la Interface 
 |AUTOMATICO*|Ráfaga|
 
 ###### * Un arma que tenga disponible el enum `AUTOMATICO` evidentemente siempre implementará el Interface `ModoAutomatico`
+
+2. Modos de disparo de `AmetralladoraLigera`:
+
+| Enum `Disparo` | Interface `ModoAutomatico`|
+|:-:|:-:|
+|AUTOMATICO|Ráfaga|
+
+`AmetralladoraLigera` tiene los métodos `alternarModoDisparo()` y `alternarARafaga()` aún teniendo disponible solo un modo de disparo (_AUTOMATICO_). Esto para la implementación de la Interface `cambiarModoDisparo()`. Se verifica si el modo de disparo actual es diferente a _`AUTOMATICO`_ y lo reajusta a dicho modo.
+
+3. Modos de disparo de `Escopeta`:
+
+| Enum `Disparo` | Interface `ModoAutomatico`|
+|:-:|:-:|
+|SOLO|Único|
+|AUTOMATICO|Ráfaga|
+
+Un arma que pueda hacer disparos en ráfaga mediante la interface `ModoAutomatico` empleará por consiguiente `Disparo.AUTOMATICO`.
+
+4. Modos de disparo de `Pistola` y `Francotirador`:
+
+| Enum `Disparo` | Interface `ModoAutomatico`|
+|:-:|:-:|
+|SOLO|Único|
+|APUNTADO|Único|
