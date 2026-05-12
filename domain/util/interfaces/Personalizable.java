@@ -1,5 +1,7 @@
 package domain.util.interfaces;
 
+import domain.enums.Accesorio;
+
 public interface Personalizable {
-    void agregarAccesorio(String accesorio);
+    int agregarAccesorio(Accesorio accesorio);
 }
