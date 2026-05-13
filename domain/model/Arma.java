@@ -9,8 +9,8 @@ public abstract class Arma
     private int cargadorActual;
     private int dimensionCargador;
     private int municionReserva;
-    private final int porcentajePrecision;
-    private final int cadenciaDisparo;
+    private int porcentajePrecision;
+    private int cadenciaDisparo;
     private Disparo modoDisparo;
 
     public Arma(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva, int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo)
@@ -54,6 +54,18 @@ public abstract class Arma
     public int getPorcentajePrecision()
     {
         return porcentajePrecision;
+    }
+
+    public void setDimensionCargador(int nuevaDimension){
+        this.dimensionCargador = nuevaDimension;
+    }
+
+    public void setPorcentajePrecision(int nuevaPrecision){
+        this.porcentajePrecision = nuevaPrecision;
+    }
+
+    public void setCadenciaDisparo(int nuevaCadencia){
+        this.cadenciaDisparo = nuevaCadencia;
     }
 
     public void agregarReserva(int balas){
@@ -103,7 +115,7 @@ public abstract class Arma
     }
 
     private void setMunicionReserva(int nuevaMunicion){
-        municionReserva = nuevaMunicion;
+        this.municionReserva = nuevaMunicion;
     }
  
     public abstract void disparar();

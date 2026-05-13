@@ -28,9 +28,14 @@ public class NineMauser extends Pistola implements Personalizable{
     }
 
     public void removerAccesorio(){
-        if(!estaAccesorioOcupado(Accesorio.NINGUNO, "Remover Accesorio")){
-            setAccesorio(Accesorio.NINGUNO);
+        if(estaAccesorioOcupado(Accesorio.BROOMHANDLE, "Remover Broomhandle")){
+            removerAccesorioBroom();
         }
+    }
+
+    public void removerAccesorioBroom(){
+        setAccesorio(Accesorio.NINGUNO);
+        setCadenciaDisparo(4);
     }
 
     public Accesorio getAccesorioActual(){
@@ -39,8 +44,11 @@ public class NineMauser extends Pistola implements Personalizable{
 
     // Accesorio para 9mm Mauser
     private void agregarAccesorioBroom(){ // => Broomhandle
-        if(!estaAccesorioOcupado(Accesorio.BROOMHANDLE, "Agregar Broomhandle"))
+        if(!estaAccesorioOcupado(Accesorio.BROOMHANDLE, "Agregar Broomhandle")){
             setAccesorio(Accesorio.BROOMHANDLE);
+            setCadenciaDisparo(2);
+        }
+            
     }
 
     private void setAccesorio(Accesorio nuevoAccesorio){
