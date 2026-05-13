@@ -3,7 +3,7 @@ package domain.model;
 import domain.util.interfaces.ModoAutomatico;
 import domain.enums.Disparo;
 
-public class AmetralladoraLigera extends Arma implements ModoAutomatico{
+public abstract class AmetralladoraLigera extends Arma implements ModoAutomatico{
 
     private int numeroDisparos;
 
