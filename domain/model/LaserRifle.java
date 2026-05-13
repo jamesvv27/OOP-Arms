@@ -1,19 +1,17 @@
 package domain.model;
 
 import domain.enums.Accesorio;
-import domain.enums.Disparo;
 import domain.util.interfaces.Personalizable;
 
 public class LaserRifle extends Francotirador implements Personalizable{
 
     private Accesorio accesorioActual;
 
-    public LaserRifle(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo) {
+    public LaserRifle() {
         super(50, "Wattz 2000 Laser Rifle", 0,
                 12, 24,
-                90, 10,
-                modoDisparo);
+                90, 10
+            );
     }
     
     public Accesorio getAccesorioActual(){

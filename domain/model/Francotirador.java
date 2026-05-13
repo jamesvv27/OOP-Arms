@@ -5,7 +5,7 @@ import domain.enums.Disparo;
 public class Francotirador extends Arma{
     
     public Francotirador(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo){
+            int porcentajePrecision, int cadenciaDisparo){
         super(dano, nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
     }
 
@@ -35,11 +35,11 @@ public class Francotirador extends Arma{
 
     public String obtenerInfoDisparo(){
 
-        if(esModoEsperado(Disparo.APUNTADO, "Mostrar APUNTADO")){
+        if(esModoEsperado(Disparo.APUNTADO)){
             return "APUNTANDO";
         }
 
-        if(esModoEsperado(Disparo.SOLO, "Mostrar SOLO")){
+        if(esModoEsperado(Disparo.SOLO)){
             return "SIN APUNTAR";
         }
 
@@ -62,6 +62,10 @@ public class Francotirador extends Arma{
             return false;
         }
         return true;
+    }
+
+    private boolean esModoEsperado(Disparo esperado){
+        return getModoDisparo() == esperado;
     }
 
 }

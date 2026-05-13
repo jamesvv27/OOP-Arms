@@ -1,15 +1,12 @@
 package domain.model;
 
-import domain.enums.Disparo;
-
 public class GaussRifle extends Francotirador {
 
-    public GaussRifle(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo) {
+    public GaussRifle() {
         super(43, "M72 Gauss Rifle", 0,
                 6, 12,
-                95, 12,
-                modoDisparo);
+                95, 12
+            );
     }
     
 }
