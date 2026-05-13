@@ -2,7 +2,7 @@ package domain.model;
 
 import domain.enums.Disparo;
 
-public class Pistola extends Arma{
+public abstract class Pistola extends Arma{
     
     public Pistola(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo){
