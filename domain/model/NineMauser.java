@@ -1,20 +1,16 @@
 package domain.model;
 
 import domain.enums.Accesorio;
-import domain.enums.Disparo;
 import domain.util.interfaces.Personalizable;
 
 public class NineMauser extends Pistola implements Personalizable{
 
     private Accesorio accesorioActual;
 
-    public NineMauser(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
-            Accesorio accesorioActual) {
+    public NineMauser() {
         super(10, "9mm Mauser", 0, 7,
             14, 60,
-            4,
-                Disparo.SOLO);
+            4);
                 this.accesorioActual = Accesorio.NINGUNO;
     }
 

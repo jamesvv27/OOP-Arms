@@ -43,11 +43,11 @@ public class Pistola extends Arma{
         Mostrar el modo de disparo con respecto a domain/enums/Disparo
          */
 
-        if(esModoEsperado(Disparo.APUNTADO, "Mostrar APUNTADO")){
+        if(esModoEsperado(Disparo.APUNTADO)){
             return "APUNTANDO";
         }
 
-        if(esModoEsperado(Disparo.SOLO, "Mostrar SOLO")){
+        if(esModoEsperado(Disparo.SOLO)){
             return "SIN APUNTAR";
         }
 
@@ -70,6 +70,10 @@ public class Pistola extends Arma{
             return false;
         }
         return true;
+    }
+
+    private boolean esModoEsperado(Disparo esperado){
+        return getModoDisparo() == esperado;
     }
 
 }
