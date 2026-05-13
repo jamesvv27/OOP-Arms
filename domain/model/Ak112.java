@@ -64,4 +64,9 @@ public class Ak112 extends RifleAsalto implements Personalizable{
         return deseado == buscado;
     }
 
+    @Override
+    public String toString(){
+        return super.toString()
+        + "Accesorio: " + getAccesorioActual() + "\n";
+    }
 }

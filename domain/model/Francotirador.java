@@ -14,7 +14,7 @@ public class Francotirador extends Arma{
         if(puedeDisparar()){
             // cargadorActual--
             setCargadorActual(getCargadorActual() - 1);
-            System.out.print(getNombreArma() + " lanza 1 bala de alto poder " + obtenerInfoDisparo());
+            System.out.print(getNombreArma() + " lanza 1 bala de alto poder " + obtenerInfoDisparo() + "\n");
         }
     }
 
@@ -56,8 +56,8 @@ public class Francotirador extends Arma{
 
     private boolean esModoEsperado(Disparo esperado, String accion){
         if(getModoDisparo() != esperado){
-            System.out.print("No se puede " + accion + "cuando modoDisparo = "
-                + getModoDisparo()
+            System.out.print("No se puede " + accion + " cuando modoDisparo = "
+                + getModoDisparo() + "\n"
             );
             return false;
         }
@@ -67,5 +67,6 @@ public class Francotirador extends Arma{
     private boolean esModoEsperado(Disparo esperado){
         return getModoDisparo() == esperado;
     }
+
 
 }

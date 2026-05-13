@@ -76,4 +76,10 @@ public class DesertEagle extends Pistola implements Personalizable{
         }
         return false;
     }
+
+    @Override
+    public String toString(){
+        return super.toString()
+        + "Accesorio: " + getAccesorioActual() + "\n";
+    }
 }

@@ -23,7 +23,7 @@ public class Escopeta extends Arma implements ModoAutomatico{
         int n_Cartuchos = calcularDisparosPosibles();
         if(puedeDisparar()){
             setCargadorActual(getCargadorActual() - n_Cartuchos);
-            System.out.print(getNombreArma() + "dispara perdigones en " + n_Cartuchos + " cartuchos en " + obtenerModoDisparo());
+            System.out.print(getNombreArma() + " dispara perdigones en " + n_Cartuchos + " cartuchos en " + obtenerModoDisparo() + "\n");
         }
     }
 
@@ -46,11 +46,11 @@ public class Escopeta extends Arma implements ModoAutomatico{
     @Override 
     public String obtenerModoDisparo(){
 
-        if(esModoEsperado(Disparo.SOLO, "Mostrar SOLO")){
+        if(esModoEsperado(Disparo.SOLO)){
             return "DISPARO UNICO";
         }
 
-        if(esModoEsperado(Disparo.AUTOMATICO, "Mostrar AUTOMATICO")){
+        if(esModoEsperado(Disparo.AUTOMATICO)){
             return "RAFAGA";
         }
 
@@ -92,6 +92,10 @@ public class Escopeta extends Arma implements ModoAutomatico{
             return false;
         }
         return true;
+    }
+
+    private boolean esModoEsperado(Disparo esperado){
+        return getModoDisparo() == esperado;
     }
 
 }

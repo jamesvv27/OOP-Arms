@@ -149,7 +149,8 @@ public abstract class Arma
 
     @Override
     public String toString(){
-        return "Municion: " + this.cargadorActual + "/" + this.municionReserva
+        return "Arma: " + getNombreArma() + 
+                "\nMunicion: " + this.cargadorActual + "/" + this.municionReserva
     			+ "\nEl cargador esta lleno: " + cargadorEstaLleno() +
     			"\nHay municion en la reserva: " + tieneReserva() +
     			"\nDimension del cargador: " + this.dimensionCargador +

@@ -17,7 +17,7 @@ public class Pistola extends Arma{
         if(puedeDisparar()){
             // cargadorActual--
             setCargadorActual(getCargadorActual() - 1);
-            System.out.print(getNombreArma() + " dispara 1 bala " + obtenerInfoDisparo());
+            System.out.print(getNombreArma() + " dispara 1 bala " + obtenerInfoDisparo() + "\n");
         }
         
     }
@@ -64,8 +64,8 @@ public class Pistola extends Arma{
 
     private boolean esModoEsperado(Disparo esperado, String accion){
         if(getModoDisparo() != esperado){
-            System.out.print("No se puede " + accion + "cuando modoDisparo = "
-                + getModoDisparo()
+            System.out.print("No se puede " + accion + " cuando modoDisparo = "
+                + getModoDisparo() + "\n"
             );
             return false;
         }

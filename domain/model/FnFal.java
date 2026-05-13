@@ -103,8 +103,8 @@ public class FnFal extends RifleAsalto implements Personalizable{
             return false;
         }
             System.out.print("No se puede " + accion + 
-            "mientras Ranura1 este ocupada por " + getRanura1()
-            + " Solicitado = " + solicitado
+            "mientras Ranura1 este ocupada por " + getRanura1() +
+            "\n"
             );
 
         return true;
@@ -115,8 +115,8 @@ public class FnFal extends RifleAsalto implements Personalizable{
             return false;
         }
             System.out.print("No se puede " + accion + 
-            "mientras Ranura2 este ocupada por " + getRanura2()
-            + " Solicitado = " + solicitado
+            "mientras Ranura2 este ocupada por " + getRanura2() +
+            "\n"
             );
 
         return true;

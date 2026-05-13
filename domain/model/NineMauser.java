@@ -64,4 +64,11 @@ public class NineMauser extends Pistola implements Personalizable{
     private boolean esMismoAccesorio(Accesorio deseado, Accesorio buscado){
         return deseado == buscado;
     }
+
+    @Override
+    public String toString(){
+        return super.toString()
+        + "Accesorio: " + getAccesorioActual() + "\n";
+    }
+    
 }

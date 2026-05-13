@@ -12,6 +12,7 @@ public class LaserRifle extends Francotirador implements Personalizable{
                 12, 24,
                 90, 10
             );
+            this.accesorioActual = Accesorio.NINGUNO;
     }
     
     public Accesorio getAccesorioActual(){
@@ -58,11 +59,16 @@ public class LaserRifle extends Francotirador implements Personalizable{
     private boolean estaAccesorioOcupado(Accesorio esperado, String accion){
         if(getAccesorioActual() == esperado){
             System.out.print("No se puede " + accion + " cuando accesorioActual = " +
-                getAccesorioActual() + ". Esperado = " + esperado
+                getAccesorioActual() + "\n"
             );
             return true;
         }
         return false;
     }
 
+    @Override
+    public String toString(){
+        return super.toString()
+        + "Accesorio: " + getAccesorioActual() + "\n";
+    }
 }
