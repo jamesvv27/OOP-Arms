@@ -12,10 +12,10 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
     o en DISPARO UNICO.
     */
 
-    public RifleAsalto(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+    public RifleAsalto(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
             int numeroDisparos) {
-        super(nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
+        super(dano, nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
         this.numeroDisparos = 1;
     }
 

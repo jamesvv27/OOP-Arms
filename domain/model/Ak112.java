@@ -8,9 +8,9 @@ public class Ak112 extends RifleAsalto implements Personalizable{
     
     private Accesorio accesorioActual;
     
-    public Ak112(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+    public Ak112(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo, int numeroDisparos) {
-        super("AK-112", 0,
+        super(16, "AK-112", 0,
                 24, 48,
                 65, 3,
                 modoDisparo, numeroDisparos

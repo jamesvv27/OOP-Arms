@@ -16,11 +16,11 @@ public class FnFal extends RifleAsalto implements Personalizable{
     private Accesorio ranura1;
     private Accesorio ranura2;
 
-    public FnFal(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+    public FnFal(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo, int numeroDisparos,
             Accesorio ranura1, Accesorio ranura2    
         ) {
-        super("FN FAL", 0,
+        super(18, "FN FAL", 0,
                 20, 40,
                 70, 2,
                 modoDisparo, numeroDisparos);
@@ -64,6 +64,7 @@ public class FnFal extends RifleAsalto implements Personalizable{
     private void removerAccesorioHpfa(){
         if(estaRanura1Ocupada(Accesorio.HPFA, "Remover HPFA")){
             setRanura1(Accesorio.NINGUNO);
+            setDano(18);
         }
     }
 
@@ -75,8 +76,11 @@ public class FnFal extends RifleAsalto implements Personalizable{
     }
 
     private void agregarAccesorioHpfa(){ // => HPFA High Power Full Automatic
-        if(!estaRanura1Ocupada(Accesorio.HPFA, "Agregar HPFA"))
+        if(!estaRanura1Ocupada(Accesorio.HPFA, "Agregar HPFA")){
             setRanura1(Accesorio.HPFA);
+            setDano(22);
+        }
+            
     }
 
     private void agregarAccesorioMira(){ // => MIRA_NOTCURNA
