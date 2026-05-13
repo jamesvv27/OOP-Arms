@@ -13,8 +13,7 @@ public class Escopeta extends Arma implements ModoAutomatico{
     private int numeroDisparos;
 
     public Escopeta(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
-            int numeroDisparos){
+            int porcentajePrecision, int cadenciaDisparo){
             super(dano, nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
             this.numeroDisparos = 1;
     }
