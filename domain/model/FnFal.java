@@ -41,12 +41,36 @@ public class FnFal extends RifleAsalto implements Personalizable{
         return 0;
     }
 
+    public int removerAccesorio(Accesorio accesorio){
+        if(esMismoAccesorio(accesorio, Accesorio.HPFA)){
+            removerAccesorioHpfa();
+            return 1;
+        }
+        if(esMismoAccesorio(accesorio, Accesorio.MIRA_NOCTURNA)){
+            removerAccesorioMira();
+            return 2;
+        }
+        return 0;
+    }
+
     public Accesorio getRanura1(){
         return ranura1;
     }
 
     public Accesorio getRanura2(){
         return ranura2;
+    }
+
+    private void removerAccesorioHpfa(){
+        if(estaRanura1Ocupada(Accesorio.HPFA, "Remover HPFA")){
+            setRanura1(Accesorio.NINGUNO);
+        }
+    }
+
+    private void removerAccesorioMira(){
+        if(estaRanura2Ocupada(Accesorio.MIRA_NOCTURNA, "Remover MIRA")){
+            setRanura2(Accesorio.NINGUNO);
+        }
     }
 
     private void agregarAccesorioHpfa(){ // => HPFA High Power Full Automatic

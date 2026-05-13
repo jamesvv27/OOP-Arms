@@ -27,6 +27,12 @@ public class Ak112 extends RifleAsalto implements Personalizable{
         return 0;
     }
 
+    public void removerAccesorio(){
+        if(!estaAccesorioOcupado(Accesorio.NINGUNO, "Remover Accesorio")){
+            setAccesorio(Accesorio.NINGUNO);
+        }
+    }
+
     public Accesorio getAccesorioActual(){
         return accesorioActual;
     }
