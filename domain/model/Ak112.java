@@ -28,9 +28,14 @@ public class Ak112 extends RifleAsalto implements Personalizable{
     }
 
     public void removerAccesorio(){
-        if(!estaAccesorioOcupado(Accesorio.NINGUNO, "Remover Accesorio")){
-            setAccesorio(Accesorio.NINGUNO);
+        if(estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Remover Accesorio")){
+            removerAccesorioMag();
         }
+    }
+
+    public void removerAccesorioMag(){
+        setAccesorio(Accesorio.NINGUNO);
+        setDimensionCargador(24);
     }
 
     public Accesorio getAccesorioActual(){
@@ -38,8 +43,10 @@ public class Ak112 extends RifleAsalto implements Personalizable{
     }
 
     private void agregarAccesorioMag(){
-        if(!estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Agregar Cargador Ext"))
+        if(!estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Agregar Cargador Ext")){
             setAccesorio(Accesorio.CARGADOR_EXPANDIDO);
+            setDimensionCargador(100);
+        }
     }
 
     private void setAccesorio(Accesorio nuevoAccesorio){

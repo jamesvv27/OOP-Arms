@@ -70,6 +70,7 @@ public class FnFal extends RifleAsalto implements Personalizable{
     private void removerAccesorioMira(){
         if(estaRanura2Ocupada(Accesorio.MIRA_NOCTURNA, "Remover MIRA")){
             setRanura2(Accesorio.NINGUNO);
+            setPorcentajePrecision(70);
         }
     }
 
@@ -79,8 +80,11 @@ public class FnFal extends RifleAsalto implements Personalizable{
     }
 
     private void agregarAccesorioMira(){ // => MIRA_NOTCURNA
-        if(!estaRanura2Ocupada(Accesorio.MIRA_NOCTURNA, "Agregar Nightsight"))
+        if(!estaRanura2Ocupada(Accesorio.MIRA_NOCTURNA, "Agregar Nightsight")){
             setRanura2(Accesorio.MIRA_NOCTURNA);
+            setPorcentajePrecision(85);
+        }
+            
     }
 
     private void setRanura1(Accesorio nuevoAccesorio){ // Corresponde a HPFA

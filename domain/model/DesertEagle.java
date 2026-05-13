@@ -43,15 +43,23 @@ public class DesertEagle extends Pistola implements Personalizable{
     }
 
     public void removerAccesorio(){
-        if(!estaAccesorioOcupado(Accesorio.NINGUNO, "Remover Accesorio")){
-            setAccesorio(Accesorio.NINGUNO);
+        if(estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Remover Accesorio")){
+            removerAccesorioMag();
         }
+    }
+
+    public void removerAccesorioMag(){
+        setAccesorio(Accesorio.NINGUNO);
+        setDimensionCargador(8);
     }
 
     // Unico accesorio disponible para Desert Eagle
     private void agregarAccesorioMag(){ // Mag => CARGADOR_EXPANDIDO
-        if(!estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Agregar Cargador Ext"))
+        if(!estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Agregar Cargador Ext")){
             setAccesorio(Accesorio.CARGADOR_EXPANDIDO);
+            setDimensionCargador(20);
+        }
+            
     }
 
     private void setAccesorio(Accesorio nuevoAccesorio){

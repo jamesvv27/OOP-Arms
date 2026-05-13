@@ -30,15 +30,23 @@ public class LaserRifle extends Francotirador implements Personalizable{
     }
 
     public void removerAccesorio(){
-        if(!estaAccesorioOcupado(Accesorio.NINGUNO, "Remover Accesorio")){
-            setAccesorio(Accesorio.NINGUNO);
+        if(estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Remover Accesorio")){
+            removerAccesorioMag();
         }
     }
 
+    public void removerAccesorioMag(){
+        setAccesorio(Accesorio.NINGUNO);
+        setDimensionCargador(12);
+    }
+    
+
     // Accesorio para Rifle laser
     private void agregarAccesorioMag(){ //
-        if(!estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Agregar Cargador Ext"))
+        if(!estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Agregar Cargador Ext")){
             setAccesorio(Accesorio.CARGADOR_EXPANDIDO);
+            setDimensionCargador(24);
+        }
     }
 
     private void setAccesorio(Accesorio nuevoAccesorio){
