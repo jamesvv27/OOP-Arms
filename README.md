@@ -1,5 +1,9 @@
 # Armas
 
+## Diagrama UML
+
+Enlace a [Mermaid AI](https://mermaid.ai/d/958279f1-ab7f-4120-81df-5318ef6d2a55)
+
 Cinco tipos de armas:
 
     - RifleAsalto
