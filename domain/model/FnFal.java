@@ -1,7 +1,6 @@
 package domain.model;
 
 import domain.enums.Accesorio;
-import domain.enums.Disparo;
 import domain.util.interfaces.Personalizable;
 
 public class FnFal extends RifleAsalto implements Personalizable{
@@ -16,14 +15,10 @@ public class FnFal extends RifleAsalto implements Personalizable{
     private Accesorio ranura1;
     private Accesorio ranura2;
 
-    public FnFal(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo, int numeroDisparos,
-            Accesorio ranura1, Accesorio ranura2    
-        ) {
+    public FnFal() {
         super(18, "FN FAL", 0,
                 20, 40,
-                70, 2,
-                modoDisparo, numeroDisparos);
+                70, 2);
         this.ranura1 = Accesorio.NINGUNO;
         this.ranura2 = Accesorio.NINGUNO;
     }

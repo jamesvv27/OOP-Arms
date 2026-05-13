@@ -88,7 +88,7 @@ public abstract class Arma
     }
     
     public boolean puedeDisparar(){
-        return cargadorEstaVacio();
+        return !cargadorEstaVacio();
     }
 
     private void vaciarReserva() {
@@ -144,10 +144,10 @@ public abstract class Arma
     	
     public void desplegarEstado() {
     	System.out.println("Municion: " + this.cargadorActual + "/" + this.municionReserva
-    			+ "El cargador esta lleno: " + cargadorEstaLleno() +
+    			+ "\nEl cargador esta lleno: " + cargadorEstaLleno() +
     			"\nHay municion en la reserva: " + tieneReserva() +
-    			"Dimension del cargador: " + this.dimensionCargador +
-                "Modo de disparo: " + getModoDisparo());
+    			"\nDimension del cargador: " + this.dimensionCargador +
+                "\nModo de disparo: " + getModoDisparo() + "\n");
     }
     
 }

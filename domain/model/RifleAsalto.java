@@ -13,8 +13,7 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
     */
 
     public RifleAsalto(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
-            int numeroDisparos) {
+            int porcentajePrecision, int cadenciaDisparo) {
         super(dano, nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
         this.numeroDisparos = 1;
     }
@@ -25,7 +24,7 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
         if(puedeDisparar()){
             // cargadorActual -= disparosPosibles
             setCargadorActual(getCargadorActual() - n_Balas);
-            System.out.print(getNombreArma() + "dispara " + n_Balas + " balas en " + obtenerModoDisparo());
+            System.out.println(getNombreArma() + " dispara " + n_Balas + " balas en " + obtenerModoDisparo());
         }
     }
 
@@ -68,7 +67,7 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
         Si el modo actual es distinto a AUTOMATICO, para RifleAsalto, siempre sera DISPARO UNICO.
         */
 
-        if(esModoEsperado(Disparo.AUTOMATICO, "Mostrar disparo AUTOMATICO")){
+        if(esModoEsperado(Disparo.AUTOMATICO)){
             return "RAFAGA";
         }
         return "DISPARO UNICO";
@@ -114,5 +113,9 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
             return false;
         }
         return true;
+    }
+
+    private boolean esModoEsperado(Disparo esperado){
+       return getModoDisparo() == esperado;
     }
 }
