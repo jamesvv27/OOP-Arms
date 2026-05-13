@@ -1,15 +1,11 @@
 package domain.model;
 
-import domain.enums.Disparo;
-
 public class LightSupport extends AmetralladoraLigera{
 
-    public LightSupport(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo, int numeroDisparos) {
+    public LightSupport() {
         super(50, "Light Support Weapon", 0,
                 30, 60, 
-                85, 2, 
-                modoDisparo, numeroDisparos);
+                85, 2);
     }
     
 }

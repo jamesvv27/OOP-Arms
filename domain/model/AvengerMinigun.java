@@ -1,15 +1,11 @@
 package domain.model;
 
-import domain.enums.Disparo;
-
 public class AvengerMinigun extends AmetralladoraLigera{
 
-    public AvengerMinigun(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo, int numeroDisparos) {
+    public AvengerMinigun() {
         super(95, "Avenger Minigun", 0, 
                 120, 240,
-                70, 1,
-                modoDisparo, numeroDisparos);
+                70, 1);
     }
     
 }

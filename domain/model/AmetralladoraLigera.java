@@ -8,8 +8,7 @@ public class AmetralladoraLigera extends Arma implements ModoAutomatico{
     private int numeroDisparos;
 
     public AmetralladoraLigera(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
-            int numeroDisparos){
+            int porcentajePrecision, int cadenciaDisparo){
             super(dano, nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.AUTOMATICO);
             this.numeroDisparos = 14;
     } 
@@ -39,7 +38,7 @@ public class AmetralladoraLigera extends Arma implements ModoAutomatico{
     @Override
     public String obtenerModoDisparo(){
 
-        if(esModoEsperado(Disparo.AUTOMATICO, "Mostrar disparo AUTOMATICO")){
+        if(esModoEsperado(Disparo.AUTOMATICO)){
             return "RAFAGA";
         }
         return "DISPARO " + getModoDisparo(); //Retorna cualesquiera que el modo sea
@@ -71,6 +70,10 @@ public class AmetralladoraLigera extends Arma implements ModoAutomatico{
             return false;
         }
         return true;
+    }
+
+    private boolean esModoEsperado(Disparo esperado){
+        return getModoDisparo() == esperado;
     }
 
 }
