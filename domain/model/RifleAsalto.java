@@ -12,10 +12,9 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
     o en DISPARO UNICO.
     */
 
-    public RifleAsalto(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
-            int numeroDisparos) {
-        super(nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
+    public RifleAsalto(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+            int porcentajePrecision, int cadenciaDisparo) {
+        super(dano, nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
         this.numeroDisparos = 1;
     }
 
@@ -25,7 +24,9 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
         if(puedeDisparar()){
             // cargadorActual -= disparosPosibles
             setCargadorActual(getCargadorActual() - n_Balas);
-            System.out.print(getNombreArma() + "dispara " + n_Balas + " balas en " + obtenerModoDisparo());
+            System.out.println(getNombreArma() + " dispara " + n_Balas + " balas en " + obtenerModoDisparo()
+                + " por " + getDano() + " de danio"
+            );
         }
     }
 
@@ -68,7 +69,7 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
         Si el modo actual es distinto a AUTOMATICO, para RifleAsalto, siempre sera DISPARO UNICO.
         */
 
-        if(esModoEsperado(Disparo.AUTOMATICO, "Mostrar disparo AUTOMATICO")){
+        if(esModoEsperado(Disparo.AUTOMATICO)){
             return "RAFAGA";
         }
         return "DISPARO UNICO";
@@ -108,11 +109,15 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
 
     private boolean esModoEsperado(Disparo esperado, String accion){
         if(getModoDisparo() != esperado){
-            System.out.print("No se puede " + accion + "cuando modoDisparo = "
-                + getModoDisparo()
+            System.out.println("No se puede " + accion + " cuando modoDisparo = "
+                + getModoDisparo() + "\n"
             );
             return false;
         }
         return true;
+    }
+
+    private boolean esModoEsperado(Disparo esperado){
+       return getModoDisparo() == esperado;
     }
 }

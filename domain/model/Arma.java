@@ -5,16 +5,18 @@ import domain.enums.Disparo;
 
 public abstract class Arma
 {
+    private int dano;
     private final String nombreArma;
     private int cargadorActual;
-    private final int dimensionCargador;
+    private int dimensionCargador;
     private int municionReserva;
-    private final int porcentajePrecision;
-    private final int cadenciaDisparo;
+    private int porcentajePrecision;
+    private int cadenciaDisparo;
     private Disparo modoDisparo;
 
-    public Arma(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva, int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo)
+    public Arma(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva, int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo)
     {
+        this.dano = dano;
         this.nombreArma = nombreArma;
         this.cargadorActual = cargadorActual;
         this.dimensionCargador = dimensionCargador;
@@ -22,6 +24,10 @@ public abstract class Arma
         this.porcentajePrecision = porcentajePrecision;
         this.cadenciaDisparo = cadenciaDisparo;
         this.modoDisparo = modoDisparo;
+    }
+
+    public int getDano(){
+        return dano;
     }
     
     public String getNombreArma() {
@@ -55,13 +61,34 @@ public abstract class Arma
     {
         return porcentajePrecision;
     }
+
+    public void setDano(int nuevoDano){
+        this.dano = nuevoDano;
+    }
+
+    public void setDimensionCargador(int nuevaDimension){
+        this.dimensionCargador = nuevaDimension;
+    }
+
+    public void setPorcentajePrecision(int nuevaPrecision){
+        this.porcentajePrecision = nuevaPrecision;
+    }
+
+    public void setCadenciaDisparo(int nuevaCadencia){
+        this.cadenciaDisparo = nuevaCadencia;
+    }
+
+    public void agregarReserva(int balas){
+        // municionReserva += balas
+        setMunicionReserva(getMunicionReserva() + balas);
+    }
     
     public int getCadenciaDisparo() {
     	return cadenciaDisparo;
     }
     
     public boolean puedeDisparar(){
-        return cargadorEstaVacio();
+        return !cargadorEstaVacio();
     }
 
     private void vaciarReserva() {
@@ -96,6 +123,10 @@ public abstract class Arma
     public void setModoDisparo(Disparo nuevoModo){
         this.modoDisparo = nuevoModo;
     }
+
+    private void setMunicionReserva(int nuevaMunicion){
+        this.municionReserva = nuevaMunicion;
+    }
  
     public abstract void disparar();
     
@@ -112,11 +143,20 @@ public abstract class Arma
     }
     	
     public void desplegarEstado() {
-    	System.out.println("Municion: " + this.cargadorActual + "/" + this.municionReserva
-    			+ "El cargador esta lleno: " + cargadorEstaLleno() +
-    			"\nHay municion en la reserva: " + tieneReserva() +
-    			"Dimension del cargador: " + this.dimensionCargador +
-                "Modo de disparo: " + getModoDisparo());
+        System.out.println(toString());
     }
     
+
+    @Override
+    public String toString(){
+        return "Arma: " + getNombreArma() + 
+                "\nMunicion: " + this.cargadorActual + "/" + this.municionReserva
+    			+ "\nEl cargador esta lleno: " + cargadorEstaLleno() +
+    			"\nHay municion en la reserva: " + tieneReserva() +
+    			"\nDimension del cargador: " + this.dimensionCargador +
+                "\nModo de disparo: " + getModoDisparo() +
+                "\nCadencia de disparo: " + getCadenciaDisparo() +
+                "\nPorcentaje de precision: " + getPorcentajePrecision() + "% " +
+                "\n";
+    }
 }

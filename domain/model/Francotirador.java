@@ -4,9 +4,9 @@ import domain.enums.Disparo;
 
 public class Francotirador extends Arma{
     
-    public Francotirador(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo){
-        super(nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
+    public Francotirador(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+            int porcentajePrecision, int cadenciaDisparo){
+        super(dano, nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
     }
 
     @Override
@@ -14,7 +14,7 @@ public class Francotirador extends Arma{
         if(puedeDisparar()){
             // cargadorActual--
             setCargadorActual(getCargadorActual() - 1);
-            System.out.print(getNombreArma() + " lanza 1 bala de alto poder " + obtenerInfoDisparo());
+            System.out.print(getNombreArma() + " lanza 1 bala de alto poder " + obtenerInfoDisparo() + "\n");
         }
     }
 
@@ -35,11 +35,11 @@ public class Francotirador extends Arma{
 
     public String obtenerInfoDisparo(){
 
-        if(esModoEsperado(Disparo.APUNTADO, "Mostrar APUNTADO")){
+        if(esModoEsperado(Disparo.APUNTADO)){
             return "APUNTANDO";
         }
 
-        if(esModoEsperado(Disparo.SOLO, "Mostrar SOLO")){
+        if(esModoEsperado(Disparo.SOLO)){
             return "SIN APUNTAR";
         }
 
@@ -56,12 +56,17 @@ public class Francotirador extends Arma{
 
     private boolean esModoEsperado(Disparo esperado, String accion){
         if(getModoDisparo() != esperado){
-            System.out.print("No se puede " + accion + "cuando modoDisparo = "
-                + getModoDisparo()
+            System.out.print("No se puede " + accion + " cuando modoDisparo = "
+                + getModoDisparo() + "\n"
             );
             return false;
         }
         return true;
     }
+
+    private boolean esModoEsperado(Disparo esperado){
+        return getModoDisparo() == esperado;
+    }
+
 
 }
