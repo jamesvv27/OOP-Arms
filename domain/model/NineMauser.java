@@ -8,10 +8,10 @@ public class NineMauser extends Pistola implements Personalizable{
 
     private Accesorio accesorioActual;
 
-    public NineMauser(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+    public NineMauser(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
             Accesorio accesorioActual) {
-        super("9mm Mauser", 0, 7,
+        super(10, "9mm Mauser", 0, 7,
             14, 60,
             4,
                 Disparo.SOLO);

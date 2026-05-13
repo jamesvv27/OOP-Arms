@@ -9,10 +9,10 @@ public class DesertEagle extends Pistola implements Personalizable{
 
     private Accesorio accesorioActual; // Una sola ranura de accesorios
 
-    public DesertEagle(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+    public DesertEagle(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
             Accesorio accesorioActual) {
-        super("Desert Eagle", 0, 8,
+        super(32, "Desert Eagle", 0, 8,
             16, 70,
             7,
                 Disparo.SOLO);

@@ -4,9 +4,9 @@ import domain.enums.Disparo;
 
 public class Pistola extends Arma{
     
-    public Pistola(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+    public Pistola(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo){
-        super(nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
+        super(dano, nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.SOLO);
     }
 
     @Override
