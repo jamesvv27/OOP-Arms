@@ -7,10 +7,10 @@ public class AmetralladoraLigera extends Arma implements ModoAutomatico{
 
     private int numeroDisparos;
 
-    public AmetralladoraLigera(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+    public AmetralladoraLigera(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
             int numeroDisparos){
-            super(nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.AUTOMATICO);
+            super(dano, nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, Disparo.AUTOMATICO);
             this.numeroDisparos = 14;
     } 
 

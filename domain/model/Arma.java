@@ -5,6 +5,7 @@ import domain.enums.Disparo;
 
 public abstract class Arma
 {
+    private int dano;
     private final String nombreArma;
     private int cargadorActual;
     private int dimensionCargador;
@@ -13,8 +14,9 @@ public abstract class Arma
     private int cadenciaDisparo;
     private Disparo modoDisparo;
 
-    public Arma(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva, int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo)
+    public Arma(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva, int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo)
     {
+        this.dano = dano;
         this.nombreArma = nombreArma;
         this.cargadorActual = cargadorActual;
         this.dimensionCargador = dimensionCargador;
@@ -22,6 +24,10 @@ public abstract class Arma
         this.porcentajePrecision = porcentajePrecision;
         this.cadenciaDisparo = cadenciaDisparo;
         this.modoDisparo = modoDisparo;
+    }
+
+    public int getDano(){
+        return dano;
     }
     
     public String getNombreArma() {
@@ -54,6 +60,10 @@ public abstract class Arma
     public int getPorcentajePrecision()
     {
         return porcentajePrecision;
+    }
+
+    public void setDano(int nuevoDano){
+        this.dano = nuevoDano;
     }
 
     public void setDimensionCargador(int nuevaDimension){
