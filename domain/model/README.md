@@ -166,3 +166,13 @@ private void agregarAccesorioMag(){ // Mag => CARGADOR_EXPANDIDO
             setAccesorio(Accesorio.CARGADOR_EXPANDIDO);
     }
 ```
+
+Si el arma tiene más de 1 ranura de accesorios, tendrá _`n`_ métodos para obtener el estado de cada ranura.
+
+```java
+
+private boolean estaRanura1Ocupada(Accesorio solicitado, String accion){...}
+
+private boolean estaRanura2Ocupada(Accesorio solicitado, String accion){...}
+
+```

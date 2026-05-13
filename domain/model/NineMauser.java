@@ -22,7 +22,7 @@ public class NineMauser extends Pistola implements Personalizable{
     public int agregarAccesorio(Accesorio deseado) {
         if(esMismoAccesorio(deseado, Accesorio.BROOMHANDLE)){
             agregarAccesorioBroom();
-            return 1; // Detener cuando se encuentra una coincidencia
+            return 1;
         }
         return 0;
     }
