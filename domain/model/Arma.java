@@ -143,11 +143,19 @@ public abstract class Arma
     }
     	
     public void desplegarEstado() {
-    	System.out.println("Municion: " + this.cargadorActual + "/" + this.municionReserva
+        System.out.println(toString());
+    }
+    
+
+    @Override
+    public String toString(){
+        return "Municion: " + this.cargadorActual + "/" + this.municionReserva
     			+ "\nEl cargador esta lleno: " + cargadorEstaLleno() +
     			"\nHay municion en la reserva: " + tieneReserva() +
     			"\nDimension del cargador: " + this.dimensionCargador +
-                "\nModo de disparo: " + getModoDisparo() + "\n");
+                "\nModo de disparo: " + getModoDisparo() +
+                "\nCadencia de disparo: " + getCadenciaDisparo() +
+                "\nPorcentaje de precision: " + getPorcentajePrecision() + "% " +
+                "\n";
     }
-    
 }

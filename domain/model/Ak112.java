@@ -1,19 +1,16 @@
 package domain.model;
 
 import domain.enums.Accesorio;
-import domain.enums.Disparo;
 import domain.util.interfaces.Personalizable;
 
 public class Ak112 extends RifleAsalto implements Personalizable{
     
     private Accesorio accesorioActual;
     
-    public Ak112(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo, int numeroDisparos) {
+    public Ak112() {
         super(16, "AK-112", 0,
                 24, 48,
-                65, 3,
-                modoDisparo, numeroDisparos
+                65, 3
             );
             this.accesorioActual = Accesorio.NINGUNO;
     }

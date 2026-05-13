@@ -24,7 +24,9 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
         if(puedeDisparar()){
             // cargadorActual -= disparosPosibles
             setCargadorActual(getCargadorActual() - n_Balas);
-            System.out.println(getNombreArma() + " dispara " + n_Balas + " balas en " + obtenerModoDisparo());
+            System.out.println(getNombreArma() + " dispara " + n_Balas + " balas en " + obtenerModoDisparo()
+                + " por " + getDano() + " de danio"
+            );
         }
     }
 
@@ -107,8 +109,8 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
 
     private boolean esModoEsperado(Disparo esperado, String accion){
         if(getModoDisparo() != esperado){
-            System.out.print("No se puede " + accion + "cuando modoDisparo = "
-                + getModoDisparo()
+            System.out.println("No se puede " + accion + " cuando modoDisparo = "
+                + getModoDisparo() + "\n"
             );
             return false;
         }

@@ -1,5 +1,6 @@
 package armas;
 
+import domain.enums.Accesorio;
 import domain.model.FnFal;
 
 public class Juego {
@@ -16,6 +17,38 @@ public class Juego {
 
         fal.desplegarEstado();
 
-        System.out.println("Disparos: " + fal.getNumeroDisparos());
+        fal.cambiarModoDisparo();
+
+        fal.disparar();
+
+        fal.desplegarEstado();
+
+        fal.cambiarModoDisparo();
+
+        fal.desplegarEstado();
+
+        fal.disparar();
+
+        fal.desplegarEstado();
+
+        fal.recargar();
+
+        fal.agregarAccesorio(Accesorio.HPFA);
+        
+        fal.desplegarEstado();
+
+        fal.disparar();
+
+        fal.desplegarEstado();
+
+        fal.agregarAccesorio(Accesorio.MIRA_NOCTURNA);
+
+        fal.cambiarModoDisparo(); // cambiarModoDisparo es un toggle para 3 opciones
+
+        fal.cambiarModoDisparo();
+
+        fal.disparar();
+
+        fal.desplegarEstado();
     }
 }

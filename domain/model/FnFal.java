@@ -122,4 +122,12 @@ public class FnFal extends RifleAsalto implements Personalizable{
         return true;
     }
 
+    @Override
+    public String toString(){
+        return super.toString()
+            + "Accesorio 1: " + getRanura1()
+            + "\nAccesorio 2: " + getRanura2()
+            + "\n";
+    }
+
 }
