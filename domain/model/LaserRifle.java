@@ -8,9 +8,9 @@ public class LaserRifle extends Francotirador implements Personalizable{
 
     private Accesorio accesorioActual;
 
-    public LaserRifle(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+    public LaserRifle(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo) {
-        super("Wattz 2000 Laser Rifle", 0,
+        super(50, "Wattz 2000 Laser Rifle", 0,
                 12, 24,
                 90, 10,
                 modoDisparo);
