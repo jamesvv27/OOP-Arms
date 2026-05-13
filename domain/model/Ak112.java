@@ -4,24 +4,24 @@ import domain.enums.Accesorio;
 import domain.enums.Disparo;
 import domain.util.interfaces.Personalizable;
 
-public class NineMauser extends Pistola implements Personalizable{
-
+public class Ak112 extends RifleAsalto implements Personalizable{
+    
     private Accesorio accesorioActual;
-
-    public NineMauser(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
-            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo,
-            Accesorio accesorioActual) {
-        super("9mm Mauser", 0, 7,
-            14, 60,
-            4,
-                Disparo.SOLO);
-                this.accesorioActual = Accesorio.NINGUNO;
+    
+    public Ak112(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo, int numeroDisparos) {
+        super("AK-112", 0,
+                24, 48,
+                65, 3,
+                modoDisparo, numeroDisparos
+            );
+            this.accesorioActual = Accesorio.NINGUNO;
     }
 
     @Override
     public int agregarAccesorio(Accesorio deseado) {
         if(esMismoAccesorio(deseado, Accesorio.BROOMHANDLE)){
-            agregarAccesorioBroom();
+            agregarAccesorioMag();
             return 1;
         }
         return 0;
@@ -31,10 +31,9 @@ public class NineMauser extends Pistola implements Personalizable{
         return accesorioActual;
     }
 
-    // Accesorio para 9mm Mauser
-    private void agregarAccesorioBroom(){ // => Broomhandle
-        if(!estaAccesorioOcupado(Accesorio.BROOMHANDLE, "Agregar Broomhandle"))
-            setAccesorio(Accesorio.BROOMHANDLE);
+    private void agregarAccesorioMag(){
+        if(!estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Agregar Cargador Ext"))
+            setAccesorio(Accesorio.CARGADOR_EXPANDIDO);
     }
 
     private void setAccesorio(Accesorio nuevoAccesorio){
@@ -54,4 +53,5 @@ public class NineMauser extends Pistola implements Personalizable{
     private boolean esMismoAccesorio(Accesorio deseado, Accesorio buscado){
         return deseado == buscado;
     }
+
 }

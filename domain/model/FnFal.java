@@ -20,8 +20,10 @@ public class FnFal extends RifleAsalto implements Personalizable{
             int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo, int numeroDisparos,
             Accesorio ranura1, Accesorio ranura2    
         ) {
-        super(nombreArma, cargadorActual, dimensionCargador, municionReserva, porcentajePrecision, cadenciaDisparo, modoDisparo,
-                numeroDisparos);
+        super("FN FAL", 0,
+                20, 40,
+                70, 2,
+                modoDisparo, numeroDisparos);
         this.ranura1 = Accesorio.NINGUNO;
         this.ranura2 = Accesorio.NINGUNO;
     }
