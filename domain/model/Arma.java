@@ -55,6 +55,11 @@ public abstract class Arma
     {
         return porcentajePrecision;
     }
+
+    public void agregarReserva(int balas){
+        // municionReserva += balas
+        setMunicionReserva(getMunicionReserva() + balas);
+    }
     
     public int getCadenciaDisparo() {
     	return cadenciaDisparo;
@@ -95,6 +100,10 @@ public abstract class Arma
 
     public void setModoDisparo(Disparo nuevoModo){
         this.modoDisparo = nuevoModo;
+    }
+
+    private void setMunicionReserva(int nuevaMunicion){
+        municionReserva = nuevaMunicion;
     }
  
     public abstract void disparar();
