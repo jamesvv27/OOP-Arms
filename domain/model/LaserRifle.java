@@ -1,0 +1,56 @@
+package domain.model;
+
+import domain.enums.Accesorio;
+import domain.enums.Disparo;
+import domain.util.interfaces.Personalizable;
+
+public class LaserRifle extends Francotirador implements Personalizable{
+
+    private Accesorio accesorioActual;
+
+    public LaserRifle(String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
+            int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo) {
+        super("Wattz 2000 Laser Rifle", 0,
+                12, 24,
+                90, 10,
+                modoDisparo);
+    }
+    
+    public Accesorio getAccesorioActual(){
+        return accesorioActual;
+    }
+
+    @Override
+    public int agregarAccesorio(Accesorio deseado) {
+        if(esMismoAccesorio(deseado, Accesorio.CARGADOR_EXPANDIDO)){
+            agregarAccesorioMag();
+            return 1;
+        }
+        return 0;
+    }
+
+    // Accesorio para Rifle laser
+    private void agregarAccesorioMag(){ //
+        if(!estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Agregar Cargador Ext"))
+            setAccesorio(Accesorio.CARGADOR_EXPANDIDO);
+    }
+
+    private void setAccesorio(Accesorio nuevoAccesorio){
+        this.accesorioActual = nuevoAccesorio;
+    }
+
+    private boolean esMismoAccesorio(Accesorio deseado, Accesorio solicitado){
+        return deseado == solicitado;
+    }
+
+    private boolean estaAccesorioOcupado(Accesorio esperado, String accion){
+        if(getAccesorioActual() == esperado){
+            System.out.print("No se puede " + accion + " cuando accesorioActual = " +
+                getAccesorioActual() + ". Esperado = " + esperado
+            );
+            return true;
+        }
+        return false;
+    }
+
+}
