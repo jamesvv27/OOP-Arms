@@ -1,0 +1,1002 @@
+[
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "10mm pistol",
+    "dano": 12,
+    "dimensionCargador": 12,
+    "municionReserva": 48,
+    "porcentajePrecision": 70,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Desert Eagle .44",
+    "dano": 18,
+    "dimensionCargador": 8,
+    "municionReserva": 32,
+    "porcentajePrecision": 65,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "14mm pistol",
+    "dano": 22,
+    "dimensionCargador": 6,
+    "municionReserva": 24,
+    "porcentajePrecision": 60,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": ".223 pistol",
+    "dano": 25,
+    "dimensionCargador": 5,
+    "municionReserva": 20,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "9mm Mauser",
+    "dano": 14,
+    "dimensionCargador": 7,
+    "municionReserva": 35,
+    "porcentajePrecision": 75,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": ["BROOMHANDLE"]
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": ".44 magnum revolver",
+    "dano": 20,
+    "dimensionCargador": 6,
+    "municionReserva": 30,
+    "porcentajePrecision": 80,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "10mm SMG",
+    "dano": 12,
+    "dimensionCargador": 30,
+    "municionReserva": 120,
+    "porcentajePrecision": 55,
+    "cadenciaDisparo": 10,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO", "HPFA"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "H&K MP9",
+    "dano": 14,
+    "dimensionCargador": 24,
+    "municionReserva": 96,
+    "porcentajePrecision": 65,
+    "cadenciaDisparo": 8,
+    "accesoriosPermitidos": ["HPFA"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Tommy gun",
+    "dano": 16,
+    "dimensionCargador": 50,
+    "municionReserva": 150,
+    "porcentajePrecision": 50,
+    "cadenciaDisparo": 12,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "H&K G11",
+    "dano": 18,
+    "dimensionCargador": 50,
+    "municionReserva": 150,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 9,
+    "accesoriosPermitidos": ["HPFA"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "H&K G11E",
+    "dano": 20,
+    "dimensionCargador": 50,
+    "municionReserva": 200,
+    "porcentajePrecision": 90,
+    "cadenciaDisparo": 10,
+    "accesoriosPermitidos": ["HPFA", "MIRA_NOCTURNA"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "M3A1 Grease Gun",
+    "dano": 15,
+    "dimensionCargador": 30,
+    "municionReserva": 90,
+    "porcentajePrecision": 60,
+    "cadenciaDisparo": 7,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Hunting rifle",
+    "dano": 22,
+    "dimensionCargador": 5,
+    "municionReserva": 40,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 1,
+    "accesoriosPermitidos": ["MIRA_NOCTURNA"]
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Scoped hunting rifle",
+    "dano": 22,
+    "dimensionCargador": 5,
+    "municionReserva": 40,
+    "porcentajePrecision": 95,
+    "cadenciaDisparo": 1,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Assault rifle",
+    "dano": 18,
+    "dimensionCargador": 24,
+    "municionReserva": 72,
+    "porcentajePrecision": 75,
+    "cadenciaDisparo": 8,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "FN FAL",
+    "dano": 20,
+    "dimensionCargador": 20,
+    "municionReserva": 80,
+    "porcentajePrecision": 80,
+    "cadenciaDisparo": 7,
+    "accesoriosPermitidos": ["HPFA", "MIRA_NOCTURNA"]
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Red Ryder LE BB gun",
+    "dano": 25,
+    "dimensionCargador": 100,
+    "municionReserva": 500,
+    "porcentajePrecision": 90,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Escopeta",
+    "nombreArma": "Shotgun",
+    "dano": 20,
+    "dimensionCargador": 2,
+    "municionReserva": 24,
+    "porcentajePrecision": 50,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Escopeta",
+    "nombreArma": "Sawed-off shotgun",
+    "dano": 28,
+    "dimensionCargador": 2,
+    "municionReserva": 20,
+    "porcentajePrecision": 30,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Escopeta",
+    "nombreArma": "Combat shotgun",
+    "dano": 25,
+    "dimensionCargador": 12,
+    "municionReserva": 60,
+    "porcentajePrecision": 65,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Escopeta",
+    "nombreArma": "H&K CAWS",
+    "dano": 28,
+    "dimensionCargador": 10,
+    "municionReserva": 50,
+    "porcentajePrecision": 70,
+    "cadenciaDisparo": 5,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Escopeta",
+    "nombreArma": "Pancor Jackhammer",
+    "dano": 30,
+    "dimensionCargador": 10,
+    "municionReserva": 60,
+    "porcentajePrecision": 60,
+    "cadenciaDisparo": 6,
+    "accesoriosPermitidos": ["HPFA"]
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Sniper rifle",
+    "dano": 40,
+    "dimensionCargador": 6,
+    "municionReserva": 30,
+    "porcentajePrecision": 98,
+    "cadenciaDisparo": 1,
+    "accesoriosPermitidos": ["MIRA_NOCTURNA"]
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Laser pistol",
+    "dano": 15,
+    "dimensionCargador": 12,
+    "municionReserva": 60,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Magneto-laser pistol",
+    "dano": 18,
+    "dimensionCargador": 12,
+    "municionReserva": 60,
+    "porcentajePrecision": 90,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Plasma pistol",
+    "dano": 25,
+    "dimensionCargador": 16,
+    "municionReserva": 64,
+    "porcentajePrecision": 80,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Solar Scorcher",
+    "dano": 35,
+    "dimensionCargador": 6,
+    "municionReserva": 0,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Alien blaster",
+    "dano": 80,
+    "dimensionCargador": 30,
+    "municionReserva": 60,
+    "porcentajePrecision": 95,
+    "cadenciaDisparo": 5,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Laser rifle",
+    "dano": 30,
+    "dimensionCargador": 24,
+    "municionReserva": 120,
+    "porcentajePrecision": 95,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": ["MIRA_NOCTURNA", "CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Plasma rifle",
+    "dano": 45,
+    "dimensionCargador": 10,
+    "municionReserva": 50,
+    "porcentajePrecision": 90,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": ["MIRA_NOCTURNA"]
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Turbo plasma rifle",
+    "dano": 50,
+    "dimensionCargador": 10,
+    "municionReserva": 50,
+    "porcentajePrecision": 90,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "YK32 Pulse pistol",
+    "dano": 40,
+    "dimensionCargador": 5,
+    "municionReserva": 25,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "YK42B pulse rifle",
+    "dano": 65,
+    "dimensionCargador": 10,
+    "municionReserva": 50,
+    "porcentajePrecision": 92,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Minigun",
+    "dano": 10,
+    "dimensionCargador": 120,
+    "municionReserva": 480,
+    "porcentajePrecision": 40,
+    "cadenciaDisparo": 20,
+    "accesoriosPermitidos": ["HPFA"]
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Avenger Minigun",
+    "dano": 12,
+    "dimensionCargador": 120,
+    "municionReserva": 480,
+    "porcentajePrecision": 45,
+    "cadenciaDisparo": 25,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Vindicator Minigun",
+    "dano": 15,
+    "dimensionCargador": 100,
+    "municionReserva": 400,
+    "porcentajePrecision": 50,
+    "cadenciaDisparo": 25,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Bozar",
+    "dano": 35,
+    "dimensionCargador": 30,
+    "municionReserva": 150,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 15,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Light Support Weapon",
+    "dano": 25,
+    "dimensionCargador": 30,
+    "municionReserva": 120,
+    "porcentajePrecision": 75,
+    "cadenciaDisparo": 12,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO", "HPFA"]
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Flamer",
+    "dano": 16,
+    "dimensionCargador": 60,
+    "municionReserva": 180,
+    "porcentajePrecision": 30,
+    "cadenciaDisparo": 10,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Improved Flamer",
+    "dano": 22,
+    "dimensionCargador": 60,
+    "municionReserva": 180,
+    "porcentajePrecision": 35,
+    "cadenciaDisparo": 12,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Silenced 10mm pistol",
+    "dano": 10,
+    "dimensionCargador": 12,
+    "municionReserva": 48,
+    "porcentajePrecision": 75,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": ".32 pistol",
+    "dano": 10,
+    "dimensionCargador": 5,
+    "municionReserva": 25,
+    "porcentajePrecision": 65,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Blackhawk",
+    "dano": 35,
+    "dimensionCargador": 6,
+    "municionReserva": 30,
+    "porcentajePrecision": 90,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Sydney's 10mm Ultra SMG",
+    "dano": 14,
+    "dimensionCargador": 50,
+    "municionReserva": 150,
+    "porcentajePrecision": 60,
+    "cadenciaDisparo": 12,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Chinese assault rifle",
+    "dano": 20,
+    "dimensionCargador": 24,
+    "municionReserva": 96,
+    "porcentajePrecision": 70,
+    "cadenciaDisparo": 8,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Xuanlong assault rifle",
+    "dano": 24,
+    "dimensionCargador": 36,
+    "municionReserva": 144,
+    "porcentajePrecision": 75,
+    "cadenciaDisparo": 9,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Ol' Painless",
+    "dano": 30,
+    "dimensionCargador": 5,
+    "municionReserva": 40,
+    "porcentajePrecision": 95,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Victory rifle",
+    "dano": 45,
+    "dimensionCargador": 5,
+    "municionReserva": 25,
+    "porcentajePrecision": 98,
+    "cadenciaDisparo": 1,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Reservist's rifle",
+    "dano": 40,
+    "dimensionCargador": 3,
+    "municionReserva": 24,
+    "porcentajePrecision": 99,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Escopeta",
+    "nombreArma": "Terrible shotgun",
+    "dano": 80,
+    "dimensionCargador": 12,
+    "municionReserva": 48,
+    "porcentajePrecision": 40,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Escopeta",
+    "nombreArma": "The Kneecapper",
+    "dano": 50,
+    "dimensionCargador": 2,
+    "municionReserva": 20,
+    "porcentajePrecision": 25,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Lever-action rifle",
+    "dano": 25,
+    "dimensionCargador": 10,
+    "municionReserva": 50,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Lincoln's Repeater",
+    "dano": 50,
+    "dimensionCargador": 15,
+    "municionReserva": 60,
+    "porcentajePrecision": 95,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Infiltrator",
+    "dano": 22,
+    "dimensionCargador": 24,
+    "municionReserva": 96,
+    "porcentajePrecision": 80,
+    "cadenciaDisparo": 8,
+    "accesoriosPermitidos": ["MIRA_NOCTURNA"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Perforator",
+    "dano": 28,
+    "dimensionCargador": 24,
+    "municionReserva": 96,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 7,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Smuggler's End",
+    "dano": 18,
+    "dimensionCargador": 30,
+    "municionReserva": 120,
+    "porcentajePrecision": 88,
+    "cadenciaDisparo": 6,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Protectron's Gaze",
+    "dano": 24,
+    "dimensionCargador": 20,
+    "municionReserva": 100,
+    "porcentajePrecision": 60,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Wazer Wifle",
+    "dano": 35,
+    "dimensionCargador": 30,
+    "municionReserva": 150,
+    "porcentajePrecision": 95,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Metal Blaster",
+    "dano": 55,
+    "dimensionCargador": 24,
+    "municionReserva": 96,
+    "porcentajePrecision": 70,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "A3-21's plasma rifle",
+    "dano": 50,
+    "dimensionCargador": 12,
+    "municionReserva": 60,
+    "porcentajePrecision": 95,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Firelance",
+    "dano": 100,
+    "dimensionCargador": 30,
+    "municionReserva": 60,
+    "porcentajePrecision": 98,
+    "cadenciaDisparo": 6,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Mesmetron",
+    "dano": 5,
+    "dimensionCargador": 1,
+    "municionReserva": 10,
+    "porcentajePrecision": 80,
+    "cadenciaDisparo": 1,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Gatling laser",
+    "dano": 15,
+    "dimensionCargador": 240,
+    "municionReserva": 960,
+    "porcentajePrecision": 55,
+    "cadenciaDisparo": 20,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Vengeance",
+    "dano": 20,
+    "dimensionCargador": 240,
+    "municionReserva": 960,
+    "porcentajePrecision": 60,
+    "cadenciaDisparo": 25,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Eugene",
+    "dano": 14,
+    "dimensionCargador": 120,
+    "municionReserva": 480,
+    "porcentajePrecision": 50,
+    "cadenciaDisparo": 22,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Burnmaster",
+    "dano": 24,
+    "dimensionCargador": 60,
+    "municionReserva": 180,
+    "porcentajePrecision": 35,
+    "cadenciaDisparo": 12,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Slo-Burn Flamer",
+    "dano": 30,
+    "dimensionCargador": 60,
+    "municionReserva": 180,
+    "porcentajePrecision": 40,
+    "cadenciaDisparo": 8,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "9mm pistol",
+    "dano": 10,
+    "dimensionCargador": 13,
+    "municionReserva": 52,
+    "porcentajePrecision": 70,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Maria",
+    "dano": 15,
+    "dimensionCargador": 13,
+    "municionReserva": 52,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 5,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Weathered 10mm pistol",
+    "dano": 16,
+    "dimensionCargador": 14,
+    "municionReserva": 56,
+    "porcentajePrecision": 75,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "12.7mm pistol",
+    "dano": 28,
+    "dimensionCargador": 7,
+    "municionReserva": 28,
+    "porcentajePrecision": 65,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": ".357 magnum revolver",
+    "dano": 18,
+    "dimensionCargador": 6,
+    "municionReserva": 36,
+    "porcentajePrecision": 80,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Lucky",
+    "dano": 22,
+    "dimensionCargador": 6,
+    "municionReserva": 36,
+    "porcentajePrecision": 90,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Mysterious Magnum",
+    "dano": 35,
+    "dimensionCargador": 6,
+    "municionReserva": 30,
+    "porcentajePrecision": 88,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Hunting revolver",
+    "dano": 40,
+    "dimensionCargador": 5,
+    "municionReserva": 25,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 1,
+    "accesoriosPermitidos": ["MIRA_NOCTURNA"]
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Ranger Sequoia",
+    "dano": 50,
+    "dimensionCargador": 5,
+    "municionReserva": 25,
+    "porcentajePrecision": 92,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "That Gun",
+    "dano": 25,
+    "dimensionCargador": 5,
+    "municionReserva": 30,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "9mm SMG",
+    "dano": 11,
+    "dimensionCargador": 30,
+    "municionReserva": 120,
+    "porcentajePrecision": 50,
+    "cadenciaDisparo": 12,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Vance's SMG",
+    "dano": 15,
+    "dimensionCargador": 60,
+    "municionReserva": 240,
+    "porcentajePrecision": 60,
+    "cadenciaDisparo": 14,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Sleepytyme",
+    "dano": 18,
+    "dimensionCargador": 40,
+    "municionReserva": 160,
+    "porcentajePrecision": 65,
+    "cadenciaDisparo": 11,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "12.7mm SMG",
+    "dano": 25,
+    "dimensionCargador": 21,
+    "municionReserva": 84,
+    "porcentajePrecision": 55,
+    "cadenciaDisparo": 9,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Silenced .22 SMG",
+    "dano": 8,
+    "dimensionCargador": 180,
+    "municionReserva": 540,
+    "porcentajePrecision": 45,
+    "cadenciaDisparo": 15,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Pistola",
+    "nombreArma": "Silenced .22 pistol",
+    "dano": 6,
+    "dimensionCargador": 16,
+    "municionReserva": 64,
+    "porcentajePrecision": 70,
+    "cadenciaDisparo": 5,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Cowboy repeater",
+    "dano": 22,
+    "dimensionCargador": 7,
+    "municionReserva": 35,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "La Longue Carabine",
+    "dano": 26,
+    "dimensionCargador": 11,
+    "municionReserva": 44,
+    "porcentajePrecision": 95,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Trail carbine",
+    "dano": 35,
+    "dimensionCargador": 8,
+    "municionReserva": 40,
+    "porcentajePrecision": 90,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": ["MIRA_NOCTURNA"]
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Brush gun",
+    "dano": 55,
+    "dimensionCargador": 6,
+    "municionReserva": 30,
+    "porcentajePrecision": 92,
+    "cadenciaDisparo": 1,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Medicine Stick",
+    "dano": 65,
+    "dimensionCargador": 8,
+    "municionReserva": 40,
+    "porcentajePrecision": 96,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Varmint rifle",
+    "dano": 12,
+    "dimensionCargador": 5,
+    "municionReserva": 25,
+    "porcentajePrecision": 80,
+    "cadenciaDisparo": 2,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO", "MIRA_NOCTURNA"]
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Ratslayer",
+    "dano": 18,
+    "dimensionCargador": 8,
+    "municionReserva": 32,
+    "porcentajePrecision": 98,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Gobi Campaign scout rifle",
+    "dano": 40,
+    "dimensionCargador": 6,
+    "municionReserva": 36,
+    "porcentajePrecision": 99,
+    "cadenciaDisparo": 3,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Anti-materiel rifle",
+    "dano": 90,
+    "dimensionCargador": 8,
+    "municionReserva": 24,
+    "porcentajePrecision": 95,
+    "cadenciaDisparo": 1,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Assault carbine",
+    "dano": 15,
+    "dimensionCargador": 24,
+    "municionReserva": 96,
+    "porcentajePrecision": 75,
+    "cadenciaDisparo": 12,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO", "HPFA"]
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "Marksman carbine",
+    "dano": 22,
+    "dimensionCargador": 20,
+    "municionReserva": 80,
+    "porcentajePrecision": 90,
+    "cadenciaDisparo": 6,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "Francotirador",
+    "nombreArma": "All-American",
+    "dano": 28,
+    "dimensionCargador": 24,
+    "municionReserva": 96,
+    "porcentajePrecision": 96,
+    "cadenciaDisparo": 7,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Service rifle",
+    "dano": 18,
+    "dimensionCargador": 20,
+    "municionReserva": 80,
+    "porcentajePrecision": 85,
+    "cadenciaDisparo": 5,
+    "accesoriosPermitidos": ["HPFA"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Survivalist's rifle",
+    "dano": 35,
+    "dimensionCargador": 10,
+    "municionReserva": 50,
+    "porcentajePrecision": 88,
+    "cadenciaDisparo": 4,
+    "accesoriosPermitidos": []
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Light machine gun",
+    "dano": 20,
+    "dimensionCargador": 90,
+    "municionReserva": 270,
+    "porcentajePrecision": 65,
+    "cadenciaDisparo": 12,
+    "accesoriosPermitidos": ["CARGADOR_EXPANDIDO"]
+  },
+  {
+    "claseBase": "RifleAsalto",
+    "nombreArma": "Laser RCW",
+    "dano": 18,
+    "dimensionCargador": 60,
+    "municionReserva": 240,
+    "porcentajePrecision": 80,
+    "cadenciaDisparo": 14,
+    "accesoriosPermitidos": ["HPFA"]
+  },
+  {
+    "claseBase": "AmetralladoraLigera",
+    "nombreArma": "Sprtel-Wood 9700",
+    "dano": 28,
+    "dimensionCargador": 90,
+    "municionReserva": 360,
+    "porcentajePrecision": 75,
+    "cadenciaDisparo": 18,
+    "accesoriosPermitidos": []
+  }
+]
