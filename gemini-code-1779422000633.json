@@ -71,7 +71,7 @@
   },
   {
     "claseBase": "RifleAsalto",
-    "nombreArma": "H&K MP9",
+    "nombreArma": "H&K P90c",
     "dano": 14,
     "dimensionCargador": 24,
     "municionReserva": 96,
