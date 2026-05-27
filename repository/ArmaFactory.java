@@ -10,7 +10,7 @@ public class ArmaFactory {
 
         switch (tipoArma) {
             case RifleAsalto:
-                return new Arma(tipoArma.getTipoArma());
+                return new Arma(tipoArma.getNombreArma());
             case Francotirador:
                 return new Arma(tipoArma.getTipoArma());
             case Pistola:

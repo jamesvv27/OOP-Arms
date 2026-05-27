@@ -7,8 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import domain.model.Arma;
+import exceptions.ArchivoArmaException;
 
-public class CvsArmaRepository implements ArmaRepository{
+public class CvsArmaRepository implements ArmaRepository  {
     private final String ruta;
 
     public CvsArmaRepository(String ruta){
@@ -16,8 +17,8 @@ public class CvsArmaRepository implements ArmaRepository{
     }
 
 
-    @Override
-    public List<Arma> getListaArma() {
+    @Override // Reparar ruta de ArchivoPersonajeException
+    public List<Arma> getListaArma() throws ArchivoPersonajeException {
         
         final List<Arma> armas = new ArrayList<>();
 
@@ -34,8 +35,7 @@ public class CvsArmaRepository implements ArmaRepository{
             }
             reader.close();
         } catch(Exception e) {
-            System.out.println("Error leyendo el archiv CSV");
-            System.out.println(e.getMessage());
+            throw new ArchivoArmaException("No se pudieron cargar las armas desde CSV", e);
         }
         return armas;
 

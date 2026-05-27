@@ -130,6 +130,8 @@ public abstract class Arma
  
     public abstract void disparar();
     
+    public abstract String getTipoArma();
+    
     public void recargar(){
         while(puedeRecargar()){
         	int municionNecesaria = (this.dimensionCargador - this.cargadorActual);

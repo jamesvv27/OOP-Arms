@@ -3,7 +3,7 @@ package domain.model;
 import domain.enums.Disparo;
 import domain.util.interfaces.ModoAutomatico;
 
-public abstract class Escopeta extends Arma implements ModoAutomatico{
+public class Escopeta extends Arma implements ModoAutomatico{
 
     /*
         Un arma debe implementar ModoAutomatico y usar Disparo.AUTOMATICO
@@ -96,6 +96,12 @@ public abstract class Escopeta extends Arma implements ModoAutomatico{
 
     private boolean esModoEsperado(Disparo esperado){
         return getModoDisparo() == esperado;
+    }
+
+    @Override
+    public String getTipoArma()
+    {
+        return "Escopeta";
     }
 
 }

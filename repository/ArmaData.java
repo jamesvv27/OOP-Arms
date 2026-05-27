@@ -7,6 +7,8 @@ import domain.enums.HabilidadClase;
 import domain.enums.PoderPersonajes;
 import domain.enums.TiposPersonajes;
 
+//el profe le puso solo el nombre y el tipo
+
 public class ArmaData {
     private final String nombrePersonaje;
     private final int vidaMaxima;
