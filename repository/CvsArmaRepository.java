@@ -1,7 +1,6 @@
 package repository;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,7 @@ public class CvsArmaRepository implements ArmaRepository  {
 
 
     @Override // Reparar ruta de ArchivoPersonajeException
-    public List<Arma> getListaArma() throws ArchivoPersonajeException {
+    public List<Arma> getListaArma() throws ArchivoArmaException {
         
         final List<Arma> armas = new ArrayList<>();
 
@@ -29,7 +28,7 @@ public class CvsArmaRepository implements ArmaRepository  {
 
             while ((linea = reader.readLine()) != null) {
                 final String[] columnas = linea.split(",");
-                final ArmaData data = new ArmaData(linea, 0, 0, null, null, null, null, null, null, 0, 0);
+                final ArmaData data = new ArmaData(columnas[0], columnas[1], Integer.parseInt(columnas[2]), Integer.parseInt(columnas[3]), Integer.parseInt(columnas[4]), Integer.parseInt(columnas[5]), Integer.parseInt(columnas[6]));
                 final Arma arma = ArmaFactory.crearDesdeData(data);
                 armas.add(arma);
             }

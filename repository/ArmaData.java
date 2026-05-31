@@ -1,98 +1,65 @@
 package repository;
 
-import domain.enums.BandoPersonaje;
-import domain.enums.ClasesPersonajes;
-import domain.enums.EstadoPersonaje;
-import domain.enums.HabilidadClase;
-import domain.enums.PoderPersonajes;
-import domain.enums.TiposPersonajes;
-
 //el profe le puso solo el nombre y el tipo
 
 public class ArmaData {
-    private final String nombrePersonaje;
-    private final int vidaMaxima;
-    private final ClasesPersonajes personaje;
-    private EstadoPersonaje estadoPersonaje;
-    private BandoPersonaje bandoPersonaje;
-    private TiposPersonajes tiposPersonajes;
-    private final PoderPersonajes nombrePoder;
-    private HabilidadClase habilidadClase;
-    private int vidaActual;
-    private int poderAtaque;
-    private final int defensa;
+    
+    private String tipoArma;
+    private String nombreArma;
+    private int dano;
+    private int dimensionCargador;
+    private int municionReserva;
+    private int porcentajePrecision;
+    private int cadenciaDisparo;
+    
+    
 
-    public PersonajeData(
-            String nombrePersonaje,
-            int vidaMaxima,
-            int vidaActual,
-            ClasesPersonajes personaje,
-            EstadoPersonaje estadoPersonaje,
-            BandoPersonaje bandoPersonaje,
-            TiposPersonajes tiposPersonajes,
-            PoderPersonajes nombrePoder,
-            HabilidadClase habilidadClase,
-            int poderAtaque,
-            int defensa) {
 
-        this.nombrePersonaje = nombrePersonaje;
-        this.vidaMaxima = vidaMaxima;
-        this.vidaActual = vidaActual;
-        this.bandoPersonaje = bandoPersonaje;
-        this.personaje = personaje;
-        this.estadoPersonaje = estadoPersonaje;
-        this.tiposPersonajes = tiposPersonajes;
-        this.nombrePoder = nombrePoder;
-        this.habilidadClase = habilidadClase;
-        this.poderAtaque = poderAtaque;
-        this.defensa = defensa;
+    public ArmaData(String tipoArma, String nombreArma, int dano, int dimensionCargador, int municionReserva,
+            int porcentajePrecision, int cadenciaDisparo) {
+        this.tipoArma = tipoArma;
+        this.nombreArma = nombreArma;
+        this.dano = dano;
+        this.dimensionCargador = dimensionCargador;
+        this.municionReserva = municionReserva;
+        this.porcentajePrecision = porcentajePrecision;
+        this.cadenciaDisparo = cadenciaDisparo;
     }
 
-    public BandoPersonaje getBandoPersonaje() {
-        return bandoPersonaje;
+
+    public String getNombreArma() {
+        return nombreArma;
     }
 
-    public int getDefensa() {
-        return defensa;
+
+    public String getTipoArma() {
+        return tipoArma;
     }
 
-    public EstadoPersonaje getEstadoPersonaje() {
-        return estadoPersonaje;
+    public int getDano() {
+        return dano;
     }
 
-    public HabilidadClase getHabilidadClase() {
-        return habilidadClase;
+
+    public int getDimensionCargador() {
+        return dimensionCargador;
     }
 
-    public ClasesPersonajes getPersonaje() {
-        return personaje;
+
+    public int getMunicionReserva() {
+        return municionReserva;
     }
 
-    public String getNombrePersonaje() {
-        return nombrePersonaje;
+
+    public int getPorcentajePrecision() {
+        return porcentajePrecision;
     }
 
-    public ClasesPersonajes getClasesPersonajes() {
-        return personaje;
+
+    public int getCadenciaDisparo() {
+        return cadenciaDisparo;
     }
 
-    public PoderPersonajes getNombrePoder() {
-        return nombrePoder;
-    }
+    
 
-    public int getPoderAtaque() {
-        return poderAtaque;
-    }
-
-    public TiposPersonajes getTiposPersonajes() {
-        return tiposPersonajes;
-    }
-
-    public int getVidaActual() {
-        return vidaActual;
-    }
-
-    public int getVidaMaxima() {
-        return vidaMaxima;
-    }
 }

@@ -1,0 +1,101 @@
+claseBase,nombreArma,dano,dimensionCargador,municionReserva,porcentajePrecision,cadenciaDisparo,accesoriosPermitidos
+Pistola,10mm pistol,12,12,48,70,3,CARGADOR_EXPANDIDO
+Pistola,Desert Eagle .44,18,8,32,65,3,CARGADOR_EXPANDIDO
+Pistola,14mm pistol,22,6,24,60,2,
+Pistola,.223 pistol,25,5,20,85,2,
+Pistola,9mm Mauser,14,7,35,75,2,BROOMHANDLE
+Pistola,.44 magnum revolver,20,6,30,80,2,
+RifleAsalto,10mm SMG,12,30,120,55,10,CARGADOR_EXPANDIDO|HPFA
+RifleAsalto,H&K MP9,14,24,96,65,8,HPFA
+RifleAsalto,Tommy gun,16,50,150,50,12,CARGADOR_EXPANDIDO
+RifleAsalto,H&K G11,18,50,150,85,9,HPFA
+RifleAsalto,H&K G11E,20,50,200,90,10,HPFA|MIRA_NOCTURNA
+RifleAsalto,M3A1 Grease Gun,15,30,90,60,7,
+Francotirador,Hunting rifle,22,5,40,85,1,MIRA_NOCTURNA
+Francotirador,Scoped hunting rifle,22,5,40,95,1,
+RifleAsalto,Assault rifle,18,24,72,75,8,CARGADOR_EXPANDIDO
+RifleAsalto,FN FAL,20,20,80,80,7,HPFA|MIRA_NOCTURNA
+Francotirador,Red Ryder LE BB gun,25,100,500,90,2,
+Escopeta,Shotgun,20,2,24,50,2,
+Escopeta,Sawed-off shotgun,28,2,20,30,2,
+Escopeta,Combat shotgun,25,12,60,65,4,CARGADOR_EXPANDIDO
+Escopeta,H&K CAWS,28,10,50,70,5,CARGADOR_EXPANDIDO
+Escopeta,Pancor Jackhammer,30,10,60,60,6,HPFA
+Francotirador,Sniper rifle,40,6,30,98,1,MIRA_NOCTURNA
+Pistola,Laser pistol,15,12,60,85,4,CARGADOR_EXPANDIDO
+Pistola,Magneto-laser pistol,18,12,60,90,4,
+Pistola,Plasma pistol,25,16,64,80,3,CARGADOR_EXPANDIDO
+Pistola,Solar Scorcher,35,6,0,85,2,
+Pistola,Alien blaster,80,30,60,95,5,
+Francotirador,Laser rifle,30,24,120,95,3,MIRA_NOCTURNA|CARGADOR_EXPANDIDO
+Francotirador,Plasma rifle,45,10,50,90,2,MIRA_NOCTURNA
+Francotirador,Turbo plasma rifle,50,10,50,90,4,
+Pistola,YK32 Pulse pistol,40,5,25,85,2,
+Francotirador,YK42B pulse rifle,65,10,50,92,2,
+AmetralladoraLigera,Minigun,10,120,480,40,20,HPFA
+AmetralladoraLigera,Avenger Minigun,12,120,480,45,25,
+AmetralladoraLigera,Vindicator Minigun,15,100,400,50,25,
+AmetralladoraLigera,Bozar,35,30,150,85,15,CARGADOR_EXPANDIDO
+AmetralladoraLigera,Light Support Weapon,25,30,120,75,12,CARGADOR_EXPANDIDO|HPFA
+AmetralladoraLigera,Flamer,16,60,180,30,10,CARGADOR_EXPANDIDO
+AmetralladoraLigera,Improved Flamer,22,60,180,35,12,
+Pistola,Silenced 10mm pistol,10,12,48,75,4,
+Pistola,.32 pistol,10,5,25,65,2,
+Pistola,Blackhawk,35,6,30,90,2,
+RifleAsalto,Sydney's 10mm Ultra SMG,14,50,150,60,12,
+RifleAsalto,Chinese assault rifle,20,24,96,70,8,CARGADOR_EXPANDIDO
+RifleAsalto,Xuanlong assault rifle,24,36,144,75,9,
+Francotirador,Ol' Painless,30,5,40,95,2,
+Francotirador,Victory rifle,45,5,25,98,1,
+Francotirador,Reservist's rifle,40,3,24,99,2,
+Escopeta,Terrible shotgun,80,12,48,40,4,
+Escopeta,The Kneecapper,50,2,20,25,3,
+Francotirador,Lever-action rifle,25,10,50,85,2,
+Francotirador,Lincoln's Repeater,50,15,60,95,3,
+RifleAsalto,Infiltrator,22,24,96,80,8,MIRA_NOCTURNA
+RifleAsalto,Perforator,28,24,96,85,7,
+Pistola,Smuggler's End,18,30,120,88,6,
+Pistola,Protectron's Gaze,24,20,100,60,4,
+Francotirador,Wazer Wifle,35,30,150,95,4,
+Francotirador,Metal Blaster,55,24,96,70,3,
+Francotirador,A3-21's plasma rifle,50,12,60,95,3,
+Pistola,Firelance,100,30,60,98,6,
+Pistola,Mesmetron,5,1,10,80,1,
+AmetralladoraLigera,Gatling laser,15,240,960,55,20,CARGADOR_EXPANDIDO
+AmetralladoraLigera,Vengeance,20,240,960,60,25,
+AmetralladoraLigera,Eugene,14,120,480,50,22,
+AmetralladoraLigera,Burnmaster,24,60,180,35,12,
+AmetralladoraLigera,Slo-Burn Flamer,30,60,180,40,8,
+Pistola,9mm pistol,10,13,52,70,4,CARGADOR_EXPANDIDO
+Pistola,Maria,15,13,52,85,5,
+Pistola,Weathered 10mm pistol,16,14,56,75,4,
+Pistola,12.7mm pistol,28,7,28,65,3,CARGADOR_EXPANDIDO
+Pistola,.357 magnum revolver,18,6,36,80,2,
+Pistola,Lucky,22,6,36,90,3,
+Pistola,Mysterious Magnum,35,6,30,88,3,
+Pistola,Hunting revolver,40,5,25,85,1,MIRA_NOCTURNA
+Pistola,Ranger Sequoia,50,5,25,92,2,
+Pistola,That Gun,25,5,30,85,4,
+RifleAsalto,9mm SMG,11,30,120,50,12,CARGADOR_EXPANDIDO
+RifleAsalto,Vance's SMG,15,60,240,60,14,
+RifleAsalto,Sleepytyme,18,40,160,65,11,
+RifleAsalto,12.7mm SMG,25,21,84,55,9,CARGADOR_EXPANDIDO
+RifleAsalto,Silenced .22 SMG,8,180,540,45,15,CARGADOR_EXPANDIDO
+Pistola,Silenced .22 pistol,6,16,64,70,5,
+Francotirador,Cowboy repeater,22,7,35,85,2,CARGADOR_EXPANDIDO
+Francotirador,La Longue Carabine,26,11,44,95,3,
+Francotirador,Trail carbine,35,8,40,90,2,MIRA_NOCTURNA
+Francotirador,Brush gun,55,6,30,92,1,
+Francotirador,Medicine Stick,65,8,40,96,2,
+Francotirador,Varmint rifle,12,5,25,80,2,CARGADOR_EXPANDIDO|MIRA_NOCTURNA
+Francotirador,Ratslayer,18,8,32,98,3,
+Francotirador,Gobi Campaign scout rifle,40,6,36,99,3,
+Francotirador,Anti-materiel rifle,90,8,24,95,1,CARGADOR_EXPANDIDO
+RifleAsalto,Assault carbine,15,24,96,75,12,CARGADOR_EXPANDIDO|HPFA
+Francotirador,Marksman carbine,22,20,80,90,6,
+Francotirador,All-American,28,24,96,96,7,
+RifleAsalto,Service rifle,18,20,80,85,5,HPFA
+RifleAsalto,Survivalist's rifle,35,10,50,88,4,
+AmetralladoraLigera,Light machine gun,20,90,270,65,12,CARGADOR_EXPANDIDO
+RifleAsalto,Laser RCW,18,60,240,80,14,HPFA
+AmetralladoraLigera,Sprtel-Wood 9700,28,90,360,75,18,
