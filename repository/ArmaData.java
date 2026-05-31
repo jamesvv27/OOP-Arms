@@ -1,7 +1,5 @@
 package repository;
 
-//el profe le puso solo el nombre y el tipo
-
 public class ArmaData {
     
     private String tipoArma;
@@ -11,9 +9,6 @@ public class ArmaData {
     private int municionReserva;
     private int porcentajePrecision;
     private int cadenciaDisparo;
-    
-    
-
 
     public ArmaData(String tipoArma, String nombreArma, int dano, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo) {
@@ -59,7 +54,5 @@ public class ArmaData {
     public int getCadenciaDisparo() {
         return cadenciaDisparo;
     }
-
-    
 
 }
