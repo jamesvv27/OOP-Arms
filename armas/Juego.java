@@ -12,16 +12,29 @@ public class Juego {
     public static void main(String[] args) {
 
         final ArmaRepository repositoryCsv = new CvsArmaRepository("./armas/data/armas.csv");
-        List<Arma> armas = new ArrayList<>();
+
+        List<Arma> rifles = new ArrayList<>();
+
+        try{
+            rifles = repositoryCsv.getListaArma("RifleAsalto");
+        }catch (ArchivoArmaException e){
+            e.printStackTrace();
+        }
+        
+        List<Arma> ametralladoras = new ArrayList<>();
         
         try{
-            armas = repositoryCsv.getListaArma();
+            ametralladoras = repositoryCsv.getListaArma("AmetralladoraLigera");
         }catch (ArchivoArmaException e){
             e.printStackTrace();
         }
     
         //for each. Recorrer toda la lista de armas e imprimir su informacion
-        for(final Arma arma : armas){
+        for(final Arma arma : rifles){
+            System.out.println(arma.toString());
+        }
+
+        for(final Arma arma : ametralladoras){
             System.out.println(arma.toString());
         }
 

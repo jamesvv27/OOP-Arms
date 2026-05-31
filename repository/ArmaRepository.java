@@ -5,5 +5,5 @@ import domain.model.Arma;
 import exceptions.ArchivoArmaException;
 
 public interface ArmaRepository {
-    List<Arma> getListaArma() throws ArchivoArmaException;
+    List<Arma> getListaArma(String tipo) throws ArchivoArmaException;
 }

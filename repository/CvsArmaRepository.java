@@ -16,7 +16,7 @@ public class CvsArmaRepository implements ArmaRepository  {
     }
 
     @Override // Reparada ruta de ArchivoPersonajeException
-    public List<Arma> getListaArma() throws ArchivoArmaException {
+    public List<Arma> getListaArma(String tipo) throws ArchivoArmaException {
         
         final List<Arma> armas = new ArrayList<>();
 
@@ -27,12 +27,14 @@ public class CvsArmaRepository implements ArmaRepository  {
 
             while ((linea = reader.readLine()) != null) {
                 final String[] columnas = linea.split(",");
-                final ArmaData data = new ArmaData(columnas[0], columnas[1],
-                    Integer.parseInt(columnas[2]), Integer.parseInt(columnas[3]),
-                    Integer.parseInt(columnas[4]), Integer.parseInt(columnas[5]),
-                    Integer.parseInt(columnas[6]));
-                final Arma arma = ArmaFactory.crearDesdeData(data);
-                armas.add(arma);
+                if(columnas[0].equals(tipo)){
+                    final ArmaData data = new ArmaData(columnas[0], columnas[1],
+                        Integer.parseInt(columnas[2]), Integer.parseInt(columnas[3]),
+                        Integer.parseInt(columnas[4]), Integer.parseInt(columnas[5]),
+                        Integer.parseInt(columnas[6]));
+                    final Arma arma = ArmaFactory.crearDesdeData(data);
+                    armas.add(arma);
+                }
             }
             reader.close();
         } catch(Exception e) {
