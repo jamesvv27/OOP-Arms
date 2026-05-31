@@ -6,7 +6,7 @@ Pistola,.223 pistol,25,5,20,85,2,
 Pistola,9mm Mauser,14,7,35,75,2,BROOMHANDLE
 Pistola,.44 magnum revolver,20,6,30,80,2,
 RifleAsalto,10mm SMG,12,30,120,55,10,CARGADOR_EXPANDIDO|HPFA
-RifleAsalto,H&K MP9,14,24,96,65,8,HPFA
+RifleAsalto,H&K P90c,14,24,96,65,8,HPFA
 RifleAsalto,Tommy gun,16,50,150,50,12,CARGADOR_EXPANDIDO
 RifleAsalto,H&K G11,18,50,150,85,9,HPFA
 RifleAsalto,H&K G11E,20,50,200,90,10,HPFA|MIRA_NOCTURNA

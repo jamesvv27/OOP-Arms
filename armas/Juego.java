@@ -1,21 +1,31 @@
 package armas;
 
-import domain.enums.Accesorio;
-import domain.model.Caws;
-import domain.model.FnFal;
-import domain.model.LaserRifle;
-import domain.model.LightSupport;
-import domain.model.NineMauser;
+import java.util.ArrayList;
+import java.util.List;
+import domain.model.Arma;
+import exceptions.ArchivoArmaException;
+import repository.ArmaRepository;
+import repository.CvsArmaRepository;
 
 public class Juego {
     
     public static void main(String[] args) {
         
         //for each. Recorrer toda la lista de armas e imprimir su informacion
+
+        final ArmaRepository repositoryCsv = new CvsArmaRepository("./armas/data/armas.csv");
+        List<Arma> armas = new ArrayList<>();
         
-        for(){
-            .getListaArmas
+        try{
+            armas = repositoryCsv.getListaArma();
+        }catch (ArchivoArmaException e){
+            e.printStackTrace();
         }
-        
+    
+        for(final Arma arma : armas){
+            System.out.println(arma.toString());
+        }
+
+
     }
 }
