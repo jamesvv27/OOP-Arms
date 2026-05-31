@@ -31,11 +31,11 @@ public class Juego {
     
         //for each. Recorrer toda la lista de armas e imprimir su informacion
         for(final Arma arma : rifles){
-            System.out.println(arma.toString());
+            arma.desplegarEstado();
         }
 
         for(final Arma arma : ametralladoras){
-            System.out.println(arma.toString());
+            arma.desplegarEstado();
         }
 
     }
