@@ -14,7 +14,11 @@ public abstract class Arma
     private int cadenciaDisparo;
     private Disparo modoDisparo;
 
-    public Arma(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva, int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo)
+    public Arma(int dano, String nombreArma,
+        int cargadorActual, int dimensionCargador,
+        int municionReserva, int porcentajePrecision,
+        int cadenciaDisparo, Disparo modoDisparo
+    )
     {
         this.dano = dano;
         this.nombreArma = nombreArma;
