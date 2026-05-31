@@ -21,11 +21,9 @@ public class ArmaData {
         this.cadenciaDisparo = cadenciaDisparo;
     }
 
-
     public String getNombreArma() {
         return nombreArma;
     }
-
 
     public String getTipoArma() {
         return tipoArma;
@@ -35,21 +33,17 @@ public class ArmaData {
         return dano;
     }
 
-
     public int getDimensionCargador() {
         return dimensionCargador;
     }
-
 
     public int getMunicionReserva() {
         return municionReserva;
     }
 
-
     public int getPorcentajePrecision() {
         return porcentajePrecision;
     }
-
 
     public int getCadenciaDisparo() {
         return cadenciaDisparo;
