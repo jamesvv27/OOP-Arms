@@ -10,8 +10,6 @@ import repository.CvsArmaRepository;
 public class Juego {
     
     public static void main(String[] args) {
-        
-        //for each. Recorrer toda la lista de armas e imprimir su informacion
 
         final ArmaRepository repositoryCsv = new CvsArmaRepository("./armas/data/armas.csv");
         List<Arma> armas = new ArrayList<>();
@@ -22,10 +20,10 @@ public class Juego {
             e.printStackTrace();
         }
     
+        //for each. Recorrer toda la lista de armas e imprimir su informacion
         for(final Arma arma : armas){
             System.out.println(arma.toString());
         }
-
 
     }
 }
