@@ -1,182 +1,39 @@
-# Armas
+# Flujos y archivos
 
-## Diagrama UML
+## (6.1) Definición
 
-Enlace a [Mermaid AI](https://mermaid.ai/d/958279f1-ab7f-4120-81df-5318ef6d2a55)
+Son canales de comunicación utilizados para leer y escribir datos desde y hacia fuentes como archivos o la memoria.
 
-Cinco tipos de armas:
+## (6.2) Clasificación - Tipos de flujos
 
-    - RifleAsalto
-    - Francotirador
-    - Escopeta
-    - Pistola
-    - Ametralladora Ligera
+### Flujos de bytes
 
-Basadas de algunas de Fallout 2
+Gestionan los datos brutos binarios. Utilizan las clases bases `InputStream` y `OutputStream`.
 
-## Lista de armas -  Resumen
+#### Binarios
+Un binario es un ejecutable, un archivo de vídeo, audio, un redireccionador, etc; Cualquier archivo cuya fuente no pueda ser visualizada por un editor de texto.
 
-1. `RifleAsalto`: 
-    * `FN FAL`
-        + Variants
-            - Default
-            - Nightsight
-            - HPFA (High Power Full Automatic)
-        + Municion
-            - 7.62mm
-    * `AK-112`
-        + Variantes
-            - Default
-            - Expanded Magazine
-        + Municion utilizable
-            - 5mm AP (Armor Piercing)
-            - 5mm JHP (Jacketed Hollow Point)
-2. `Francotirador`:
-    * `M72 Gauss Rifle`
-        + Municion
-            - 2mm EC (Electromagnetic Cartdrige)
-    * `Wattz 2000 Laser Rifle`
-        + Variantes
-            - Default
-            - Extended Capacity
-        + Municion
-            - Microfusion Cell
-3. `Escopeta`: 
-    + `H&K CAWS`
-        + Municion
-            - 12 Gauge
-    * `Pancor Jackhammer`
-        + Municion
-            - 12 Gauge
-4. `Pistola`: 
-    * `Desert Eagle .44`
-        + Variantes
-            - Default
-            - Expanded Magazine
-        + Municion utilizable
-            - .44 Magnum FMJ (Full Metal Jacket)
-            - .44 Magnum JHP (Jacketed Hollow Point)
-    * `PPK12 Gauss Pistol`
-        + Municion
-            - 2mm EC (Electromagnetic Cartdrige)
-    * `9mm Mauser`
-        + Variantes
-            - Default
-            - Broomhandle
-        + Municion utilizable
-            - 9mm
-            - 9mm ball
-5. `AmetralladoraLigera`: 
-    * `Avenger Minigun`
-        + Municion utilizable
-            - 5mm AP (Armor Piercing)
-            - 5mm JHP (Jacketed Hollow Point)
-    * `Light Support Weapon`
-        + Municion
-            - .223 FMJ (Full Metal Jacket)
+Las clases derivadas más utilizadas para el manejo de binarios son `FileInputStream` (leer entrada) y `FileOutputStream` (escribir salida).
 
-### Variantes
+### Flujos de caracteres
 
-| Arma  | Tipo | Variantes de arma / Mods | Variantes de municion |
-| - |:-: |:-:|:-:|
-| FN FAL      | Rifle de Asalto | ✅     |❌ |
-| AK-112      | Rifle de Asalto | ✅     |✅ |
-| M72 Gauss Rifle      | Francotirador | ❌     | ❌|
-| Wattz 2000 Laser Rifle      | Francotirador | ✅     | ❌|
-| H&K CAWS      | Escopeta | ❌     | ❌|
-| Pancor Jackhammer      | Escopeta | ❌     | ❌|
-| Desert Eagle .44      | Pistola | ✅     |✅ |
-| PPK12 Gauss Pistol      | Pistola | ❌     |❌ |
-| 9mm Mauser      | Pistola | ✅   |✅ |
-| Avenger Minigun      | Ametralladora Ligera| ❌     | ✅|
-| Light Support Weapon      | Ametralladora Ligera| ❌     | ❌|
-
-## Estructura
-
-### Herencia
-
-__Armas --> Pistola --> DesertEagle__
-
-La **recarga** se define en _`Armas`_. El **disparo** y **el cambio del modo de disparo** se define en _`RifleAsalto`_ Las **dimensiones del cargador**, **variantes de arma**, y **variantes de munición** se definen en _`FN FAL`_.
-
-```java
-public abstract class Arma {...}
-...
-    public class Pistola extends Arma{...}
-...
-        public class DesertEagle extends Pistola{...}
-```
-
-### Definición de modos de disparo
-
-Todos los tipos de armas que tengan ***más de un método de disparo, independientemente de si tengan un modo automáitco o no***, pueden cambiar su modo de disparo con el método `alternarModoDisparo()`. Los modos se encuentran en el _Enum_ _`domain/enums/Disparo`_; (**solo, apuntado...**), y la cantidad de modos utilizables para cada arma puede ser cualquiera.
-
-```java
-public enum Disparo{
-    SOLO,
-    APUNTADO,
-    AUTOMATICO
-    }
-
-    // El enum tiene 3 elementos, pero la clase Pistola puede usar unicamente SOLO y APUNTADO
- ```
-
-Pero aquellas que implementen la _Interface_ _`util/interfaces/ModoAutomatico`_ sobrescribirán el método `cambiarModoDisparo()` para hacer esto, pues en este se diferencía si el arma hace **disparos únicos** o **ráfagas**.
-
-Los modos de disparo del Enum `Disparo` tienen su equivalente para la Interface `ModoAutomatico`, pues las armas que implementen esta Interface, seguirán empleando los elementos del Enum.
-
-1. Modos de disparo de `RifleAsalto`:
-
-| Enum `Disparo` | Interface `ModoAutomatico`|
-|:-:|:-:|
-|SOLO|Único|
-|APUNTADO|Único|
-|AUTOMATICO*|Ráfaga|
-
-###### * Un arma que tenga disponible el enum `AUTOMATICO` evidentemente siempre implementará el Interface `ModoAutomatico`
-
-2. Modos de disparo de `AmetralladoraLigera`:
-
-| Enum `Disparo` | Interface `ModoAutomatico`|
-|:-:|:-:|
-|AUTOMATICO|Ráfaga|
-
-`AmetralladoraLigera` tiene los métodos `alternarModoDisparo()` y `alternarARafaga()` aún teniendo disponible solo un modo de disparo (_AUTOMATICO_). Esto para la implementación de la Interface `cambiarModoDisparo()`. Se verifica si el modo de disparo actual es diferente a _`AUTOMATICO`_ y lo reajusta a dicho modo.
-
-3. Modos de disparo de `Escopeta`:
-
-| Enum `Disparo` | Interface `ModoAutomatico`|
-|:-:|:-:|
-|SOLO|Único|
-|AUTOMATICO|Ráfaga|
-
-Un arma que pueda hacer disparos en ráfaga mediante la interface `ModoAutomatico` empleará por consiguiente `Disparo.AUTOMATICO`.
-
-4. Modos de disparo de `Pistola` y `Francotirador`:
-
-| Enum `Disparo` | Interface `ModoAutomatico`|
-|:-:|:-:|
-|SOLO|Único|
-|APUNTADO|Único|
+Gestionan datos adaptándose a una codificación, como ASCII o UTF-8. Sus clases base son `Reader` y `Writer`. Estos flujos son los ideales para gestionar archivos de texto como `.json` o `.csv`.
 
 
-### Definición de Accesorios / Variantes
 
-Toda arma descendiente de su respectiva clase madre _-independientemente de cuál-_ (ej. `DesertEagle` proveniente de `Pistola`) toma sus accesorios del enum _`domain/enums/Accesorio`_. La existencia de uno o varios métodos privados del siguiente tipo para cada **arma hija** definen ***qué*** accesorios del enum podrá tomar dicha arma.
+#### Archivos de texto
+Utilizan una codificación específica, y pueden ser abiertos por un editor de texto. (No confundirse con un procesador de textos).
 
-```java
-private void agregarAccesorioMag(){ // Mag => CARGADOR_EXPANDIDO
-        if(!estaAccesorioOcupado(Accesorio.CARGADOR_EXPANDIDO, "Agregar Cargador Ext"))
-            setAccesorio(Accesorio.CARGADOR_EXPANDIDO);
-    }
-```
+También se puede utilizar `BufferedReader` y `BufferedWriter` para leer estos archivos.
 
-Si el arma tiene más de 1 ranura de accesorios, tendrá _`n`_ métodos para obtener el estado de cada ranura.
+Otras opciones son `Scanner`
 
-```java
+## (6.3) Operaciones básicas y tipos de acceso
 
-private boolean estaRanura1Ocupada(Accesorio solicitado, String accion){...}
+https://www.w3schools.com/java/java_files.asp
 
-private boolean estaRanura2Ocupada(Accesorio solicitado, String accion){...}
+Leer hasta I/O
 
-```
+## (6.4) Manejo de objetos persistentes
+
+Alchile eso creo que ya ni va a venir

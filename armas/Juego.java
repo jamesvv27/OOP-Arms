@@ -1,124 +1,42 @@
 package armas;
 
-import domain.enums.Accesorio;
-import domain.model.Caws;
-import domain.model.FnFal;
-import domain.model.LaserRifle;
-import domain.model.LightSupport;
-import domain.model.NineMauser;
+import java.util.ArrayList;
+import java.util.List;
+import domain.model.Arma;
+import exceptions.ArchivoArmaException;
+import repository.ArmaRepository;
+import repository.CvsArmaRepository;
 
 public class Juego {
     
     public static void main(String[] args) {
-        FnFal fal = new FnFal();
-        fal.desplegarEstado();
 
-        fal.recargar();
+        final ArmaRepository repositoryCsv = new CvsArmaRepository("./armas/data/armas.csv");
 
-        fal.desplegarEstado();
+        List<Arma> rifles = new ArrayList<>();
 
-        fal.disparar();
-
-        fal.desplegarEstado();
-
-        fal.cambiarModoDisparo();
-
-        fal.disparar();
-
-        fal.desplegarEstado();
-
-        fal.cambiarModoDisparo();
-
-        fal.desplegarEstado();
-
-        fal.disparar();
-
-        fal.desplegarEstado();
-
-        fal.recargar();
-
-        fal.agregarAccesorio(Accesorio.HPFA);
+        try{
+            rifles = repositoryCsv.getListaArma("RifleAsalto");
+        }catch (ArchivoArmaException e){
+            e.printStackTrace();
+        }
         
-        fal.desplegarEstado();
+        List<Arma> ametralladoras = new ArrayList<>();
+        
+        try{
+            ametralladoras = repositoryCsv.getListaArma("AmetralladoraLigera");
+        }catch (ArchivoArmaException e){
+            e.printStackTrace();
+        }
+    
+        //for each. Recorrer toda la lista de armas e imprimir su informacion
+        for(final Arma arma : rifles){
+            arma.desplegarEstado();
+        }
 
-        fal.disparar();
+        for(final Arma arma : ametralladoras){
+            arma.desplegarEstado();
+        }
 
-        fal.desplegarEstado();
-
-        fal.agregarAccesorio(Accesorio.MIRA_NOCTURNA);
-
-        fal.cambiarModoDisparo(); // cambiarModoDisparo es un toggle para 3 opciones
-
-        fal.cambiarModoDisparo();
-
-        fal.disparar();
-
-        fal.desplegarEstado();
-
-        fal.removerAccesorio(Accesorio.HPFA);
-
-        fal.desplegarEstado();
-
-        LightSupport ls = new LightSupport();
-
-        ls.desplegarEstado();
-
-        ls.recargar();
-
-        ls.desplegarEstado();
-
-        ls.disparar();
-
-        ls.desplegarEstado();
-
-        ls.disparar();
-
-        ls.disparar();
-
-        ls.desplegarEstado();
-
-        ls.recargar();
-
-        ls.desplegarEstado();
-
-        LaserRifle laser = new LaserRifle();
-
-        laser.desplegarEstado();
-
-        laser.recargar();
-
-        laser.disparar();
-
-        laser.desplegarEstado();
-
-        laser.agregarAccesorio(Accesorio.CARGADOR_EXPANDIDO);
-
-        laser.desplegarEstado();
-
-        Caws hkCaws = new Caws();
-
-        hkCaws.desplegarEstado();
-
-        hkCaws.recargar();
-
-        hkCaws.disparar();
-
-        hkCaws.cambiarModoDisparo();
-
-        hkCaws.disparar();
-
-        hkCaws.desplegarEstado();
-
-        NineMauser mauser = new NineMauser();
-
-        mauser.agregarAccesorio(Accesorio.BROOMHANDLE);
-
-        mauser.recargar();
-
-        mauser.desplegarEstado();
-
-        mauser.disparar();
-
-        mauser.desplegarEstado();
     }
 }

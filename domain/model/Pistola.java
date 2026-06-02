@@ -2,7 +2,7 @@ package domain.model;
 
 import domain.enums.Disparo;
 
-public abstract class Pistola extends Arma{
+public class Pistola extends Arma{
     
     public Pistola(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva,
             int porcentajePrecision, int cadenciaDisparo){
@@ -74,6 +74,12 @@ public abstract class Pistola extends Arma{
 
     private boolean esModoEsperado(Disparo esperado){
         return getModoDisparo() == esperado;
+    }
+
+    @Override
+    public String getTipoArma()
+    {
+        return "Pistola";
     }
 
 }

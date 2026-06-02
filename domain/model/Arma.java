@@ -14,7 +14,11 @@ public abstract class Arma
     private int cadenciaDisparo;
     private Disparo modoDisparo;
 
-    public Arma(int dano, String nombreArma, int cargadorActual, int dimensionCargador, int municionReserva, int porcentajePrecision, int cadenciaDisparo, Disparo modoDisparo)
+    public Arma(int dano, String nombreArma,
+        int cargadorActual, int dimensionCargador,
+        int municionReserva, int porcentajePrecision,
+        int cadenciaDisparo, Disparo modoDisparo
+    )
     {
         this.dano = dano;
         this.nombreArma = nombreArma;
@@ -130,6 +134,8 @@ public abstract class Arma
  
     public abstract void disparar();
     
+    public abstract String getTipoArma();
+    
     public void recargar(){
         while(puedeRecargar()){
         	int municionNecesaria = (this.dimensionCargador - this.cargadorActual);
@@ -149,7 +155,8 @@ public abstract class Arma
 
     @Override
     public String toString(){
-        return "Arma: " + getNombreArma() + 
+        return "Arma: " + getNombreArma() +
+                "\nTipo: " + getTipoArma() +
                 "\nMunicion: " + this.cargadorActual + "/" + this.municionReserva
     			+ "\nEl cargador esta lleno: " + cargadorEstaLleno() +
     			"\nHay municion en la reserva: " + tieneReserva() +

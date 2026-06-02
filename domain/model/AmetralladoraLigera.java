@@ -3,7 +3,7 @@ package domain.model;
 import domain.util.interfaces.ModoAutomatico;
 import domain.enums.Disparo;
 
-public abstract class AmetralladoraLigera extends Arma implements ModoAutomatico{
+public class AmetralladoraLigera extends Arma implements ModoAutomatico{
 
     private int numeroDisparos;
 
@@ -74,6 +74,12 @@ public abstract class AmetralladoraLigera extends Arma implements ModoAutomatico
 
     private boolean esModoEsperado(Disparo esperado){
         return getModoDisparo() == esperado;
+    }
+
+    @Override
+    public String getTipoArma()
+    {
+        return "AmetralladoraLigera";
     }
 
 }

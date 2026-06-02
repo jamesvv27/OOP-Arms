@@ -120,4 +120,10 @@ public class RifleAsalto extends Arma implements ModoAutomatico{
     private boolean esModoEsperado(Disparo esperado){
        return getModoDisparo() == esperado;
     }
+
+    @Override
+    public String getTipoArma()
+    {
+        return "RifleAsalto";
+    }
 }
